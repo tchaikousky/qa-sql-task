@@ -1,0 +1,16 @@
+INSERT INTO Customer (Name, Birthday) VALUES ("Todd Jones", 19700527);
+INSERT INTO Customer (Name, Birthday) VALUES ("Kalid Taylor", 19861120);
+INSERT INTO Customer (Name, Birthday) VALUES ("Samantha Carter", 19950315);
+INSERT INTO Customer (Name, Birthday) VALUES ("Leroy Jenkins", 20020914);
+INSERT INTO Customer (Name, Birthday) VALUES ("Britt Jones", 19920517);
+INSERT INTO Product (Name, Quantity) VALUES ("Smash Bros", 35);
+INSERT INTO Product (Name, Quantity) VALUES ("Lego Smasher", 61);
+INSERT INTO Product (Name, Quantity) VALUES ("Fight Night", 13);
+INSERT INTO Product (Name, Quantity) VALUES ("Nascar 2", 2);
+INSERT INTO Product (Name, Quantity) VALUES ("Really Fun Game", 107);
+INSERT INTO Orders (customer_id, product_id, date_placed, quantity) VALUES (3, 2, 20210510, 3);
+INSERT INTO Orders (customer_id, product_id, date_placed, quantity) VALUES (2, 4, 20210511, 1);
+INSERT INTO Orders (customer_id, product_id, date_placed, quantity) VALUES (4, 1, 20210510, 1);
+INSERT INTO Orders (customer_id, product_id, date_placed, quantity) VALUES (1, 5, 20210508, 10);
+INSERT INTO Orders (customer_id, product_id, date_placed, quantity) VALUES (5, 4, 20210509, 2);
+

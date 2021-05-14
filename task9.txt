@@ -1,0 +1,28 @@
+INSERT INTO students (first_name, last_name, age) VALUES ("John", "Smith", 21);
+INSERT INTO students (first_name, last_name, age) VALUES ("Carrie", "Johansen", 34);
+INSERT INTO students (first_name, last_name, age) VALUES ("Teri", "Kryzinski", 18);
+INSERT INTO classes (subject, description, level) VALUES ("Calculus 1", "Entry level calculus.", "Beginner");
+INSERT INTO classes (subject, description, level) VALUES ("Intro Into Java", "Mid Level programming.", "Intermediate");
+INSERT INTO classes (subject, description, level) VALUES ("SQL: A Deep Dive", "Advanced Databases.", "Advanced");
+INSERT INTO enrollment (studentid, classid) VALUES (1, 1);
+INSERT INTO enrollment (studentid, classid) VALUES (1, 2);
+INSERT INTO enrollment (studentid, classid) VALUES (2, 1);
+INSERT INTO enrollment (studentid, classid) VALUES (2, 3);
+INSERT INTO enrollment (studentid, classid) VALUES (3, 2);
+INSERT INTO enrollment (studentid, classid) VALUES (3, 3);
+
+
+
+
+mysql> SELECT students.first_name, students.last_name, classes.subject FROM enrollment INNER JOIN students ON students.studentid = enrollment.studentid INNER JOIN classes ON classes.classid = enrollment.classid ORDER BY students.studentid;
++------------+-----------+------------------+
+| first_name | last_name | subject          |
++------------+-----------+------------------+
+| John       | Smith     | Calculus 1       |
+| John       | Smith     | Intro Into Java  |
+| Carrie     | Johansen  | Calculus 1       |
+| Carrie     | Johansen  | SQL: A Deep Dive |
+| Teri       | Kryzinski | Intro Into Java  |
+| Teri       | Kryzinski | SQL: A Deep Dive |
++------------+-----------+------------------+
+6 rows in set (0.00 sec)

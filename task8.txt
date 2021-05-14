@@ -1,0 +1,1657 @@
+1). mysql> select * from actor where first_name = "John";
++----------+------------+-----------+---------------------+
+| actor_id | first_name | last_name | last_update         |
++----------+------------+-----------+---------------------+
+|      192 | JOHN       | SUVARI    | 2006-02-15 04:34:33 |
++----------+------------+-----------+---------------------+
+1 row in set (0.00 sec)
+
+
+2). mysql> select * from actor where last_name = "neeson";
++----------+------------+-----------+---------------------+
+| actor_id | first_name | last_name | last_update         |
++----------+------------+-----------+---------------------+
+|       61 | CHRISTIAN  | NEESON    | 2006-02-15 04:34:33 |
+|       62 | JAYNE      | NEESON    | 2006-02-15 04:34:33 |
++----------+------------+-----------+---------------------+
+2 rows in set (0.00 sec)
+
+3).  mysql> select * from actor where actor_id % 10 = 0;
++----------+------------+-------------+---------------------+
+| actor_id | first_name | last_name   | last_update         |
++----------+------------+-------------+---------------------+
+|       10 | CHRISTIAN  | GABLE       | 2006-02-15 04:34:33 |
+|       20 | LUCILLE    | TRACY       | 2006-02-15 04:34:33 |
+|       30 | SANDRA     | PECK        | 2006-02-15 04:34:33 |
+|       40 | JOHNNY     | CAGE        | 2006-02-15 04:34:33 |
+|       50 | NATALIE    | HOPKINS     | 2006-02-15 04:34:33 |
+|       60 | HENRY      | BERRY       | 2006-02-15 04:34:33 |
+|       70 | MICHELLE   | MCCONAUGHEY | 2006-02-15 04:34:33 |
+|       80 | RALPH      | CRUZ        | 2006-02-15 04:34:33 |
+|       90 | SEAN       | GUINESS     | 2006-02-15 04:34:33 |
+|      100 | SPENCER    | DEPP        | 2006-02-15 04:34:33 |
+|      110 | SUSAN      | DAVIS       | 2006-02-15 04:34:33 |
+|      120 | PENELOPE   | MONROE      | 2006-02-15 04:34:33 |
+|      130 | GRETA      | KEITEL      | 2006-02-15 04:34:33 |
+|      140 | WHOOPI     | HURT        | 2006-02-15 04:34:33 |
+|      150 | JAYNE      | NOLTE       | 2006-02-15 04:34:33 |
+|      160 | CHRIS      | DEPP        | 2006-02-15 04:34:33 |
+|      170 | MENA       | HOPPER      | 2006-02-15 04:34:33 |
+|      180 | JEFF       | SILVERSTONE | 2006-02-15 04:34:33 |
+|      190 | AUDREY     | BAILEY      | 2006-02-15 04:34:33 |
+|      200 | THORA      | TEMPLE      | 2006-02-15 04:34:33 |
++----------+------------+-------------+---------------------+
+20 rows in set (0.00 sec)
+
+4). mysql> select description from film where film_id = 100;
++-----------------------------------------------------------------------------------------------------------------+
+| description                                                                                                     |
++-----------------------------------------------------------------------------------------------------------------+
+| A Beautiful Drama of a Dentist And a Composer who must Battle a Sumo Wrestler in The First Manned Space Station |
++-----------------------------------------------------------------------------------------------------------------+
+1 row in set (0.10 sec)
+
+5). mysql> select title, rating from film WHERE rating = "R";
++-------------------------+--------+
+| title                   | rating |
++-------------------------+--------+
+| AIRPORT POLLOCK         | R      |
+| ALONE TRIP              | R      |
+| AMELIE HELLFIGHTERS     | R      |
+| AMERICAN CIRCUS         | R      |
+| ANACONDA CONFESSIONS    | R      |
+| ANALYZE HOOSIERS        | R      |
+| ANYTHING SAVANNAH       | R      |
+| APOCALYPSE FLAMINGOS    | R      |
+| ARMY FLINTSTONES        | R      |
+| BADMAN DAWN             | R      |
+| BANGER PINOCCHIO        | R      |
+| BEAR GRACELAND          | R      |
+| BEAST HUNCHBACK         | R      |
+| BEVERLY OUTLAW          | R      |
+| BOOGIE AMELIE           | R      |
+| BOULEVARD MOB           | R      |
+| BROOKLYN DESERT         | R      |
+| BROTHERHOOD BLANKET     | R      |
+| BUBBLE GROSSE           | R      |
+| CAMPUS REMEMBER         | R      |
+| CANDIDATE PERDITION     | R      |
+| CANYON STOCK            | R      |
+| CAUSE DATE              | R      |
+| CHANCE RESURRECTION     | R      |
+| CHARIOTS CONSPIRACY     | R      |
+| CHOCOLATE DUCK          | R      |
+| CLONES PINOCCHIO        | R      |
+| CLOSER BANG             | R      |
+| CLUELESS BUCKET         | R      |
+| COMANCHEROS ENEMY       | R      |
+| COMMANDMENTS EXPRESS    | R      |
+| CONNECTICUT TRAMP       | R      |
+| CONVERSATION DOWNHILL   | R      |
+| CROSSING DIVORCE        | R      |
+| CROWDS TELEMARK         | R      |
+| CRUSADE HONEY           | R      |
+| CUPBOARD SINNERS        | R      |
+| DATE SPEED              | R      |
+| DELIVERANCE MULHOLLAND  | R      |
+| DESERT POSEIDON         | R      |
+| DETAILS PACKER          | R      |
+| DEVIL DESIRE            | R      |
+| DINOSAUR SECRETARY      | R      |
+| DISTURBING SCARFACE     | R      |
+| DIVINE RESURRECTION     | R      |
+| DOOM DANCING            | R      |
+| DOUBLE WRATH            | R      |
+| DOUBTFIRE LABYRINTH     | R      |
+| DROP WATERFRONT         | R      |
+| DURHAM PANKY            | R      |
+| EARRING INSTINCT        | R      |
+| ENTRAPMENT SATISFACTION | R      |
+| ESCAPE METROPOLIS       | R      |
+| EXPRESS LONELY          | R      |
+| FAMILY SWEET            | R      |
+| FEUD FROGMEN            | R      |
+| FEVER EMPIRE            | R      |
+| FIDDLER LOST            | R      |
+| FIGHT JAWBREAKER        | R      |
+| FINDING ANACONDA        | R      |
+| FIRE WOLVES             | R      |
+| FISH OPUS               | R      |
+| FLIGHT LIES             | R      |
+| FORREST SONS            | R      |
+| FREAKY POCUS            | R      |
+| FRIDA SLIPPER           | R      |
+| FROGMEN BREAKING        | R      |
+| FUGITIVE MAGUIRE        | R      |
+| GALAXY SWEETHEARTS      | R      |
+| GHOSTBUSTERS ELF        | R      |
+| GIANT TROOPERS          | R      |
+| GILMORE BOILED          | R      |
+| GO PURPLE               | R      |
+| GOLD RIVER              | R      |
+| GOLDMINE TYCOON         | R      |
+| GONE TROUBLE            | R      |
+| GORGEOUS BINGO          | R      |
+| GRACELAND DYNAMITE      | R      |
+| GREEDY ROOTS            | R      |
+| GRINCH MASSAGE          | R      |
+| GROSSE WONDERFUL        | R      |
+| GUYS FALCON             | R      |
+| HAMLET WISDOM           | R      |
+| HANDICAP BOONDOCK       | R      |
+| HARDLY ROBBERS          | R      |
+| HAUNTING PIANIST        | R      |
+| HEAD STRANGER           | R      |
+| HIGH ENCINO             | R      |
+| HIGHBALL POTTER         | R      |
+| HOLOCAUST HIGHBALL      | R      |
+| HOLY TADPOLE            | R      |
+| HOME PITY               | R      |
+| HOMEWARD CIDER          | R      |
+| HONEY TIES              | R      |
+| HORROR REIGN            | R      |
+| HOUSE DYNAMITE          | R      |
+| ICE CROSSING            | R      |
+| ILLUSION AMELIE         | R      |
+| INTERVIEW LIAISONS      | R      |
+| ISHTAR ROCKETEER        | R      |
+| JEEPERS WEDDING         | R      |
+| JEOPARDY ENCINO         | R      |
+| JET NEIGHBORS           | R      |
+| KANE EXORCIST           | R      |
+| KILLER INNOCENT         | R      |
+| KISSING DOLLS           | R      |
+| KRAMER CHOCOLATE        | R      |
+| LIGHTS DEER             | R      |
+| LOATHING LEGALLY        | R      |
+| LOCK REAR               | R      |
+| LOSE INCH               | R      |
+| LOVE SUICIDES           | R      |
+| MADIGAN DORADO          | R      |
+| MADISON TRAP            | R      |
+| MAGNIFICENT CHITTY      | R      |
+| MASSACRE USUAL          | R      |
+| MAUDE MOD               | R      |
+| MOTHER OLEANDER         | R      |
+| MUSIC BOONDOCK          | R      |
+| NEIGHBORS CHARADE       | R      |
+| OPUS ICE                | R      |
+| ORIENT CLOSER           | R      |
+| OZ LIAISONS             | R      |
+| PAJAMA JAWBREAKER       | R      |
+| PLUTO OLEANDER          | R      |
+| PRIX UNDEFEATED         | R      |
+| PURPLE MOVIE            | R      |
+| QUEST MUSSOLINI         | R      |
+| QUILLS BULL             | R      |
+| RAGE GAMES              | R      |
+| RAGING AIRPLANE         | R      |
+| REMEMBER DIARY          | R      |
+| REQUIEM TYCOON          | R      |
+| REUNION WITCHES         | R      |
+| ROAD ROXANNE            | R      |
+| ROBBERY BRIGHT          | R      |
+| ROOF CHAMPION           | R      |
+| ROXANNE REBEL           | R      |
+| RULES HUMAN             | R      |
+| RUN PACIFIC             | R      |
+| SALUTE APOLLO           | R      |
+| SATURN NAME             | R      |
+| SENSE GREEK             | R      |
+| SEVEN SWARM             | R      |
+| SHEPHERD MIDSUMMER      | R      |
+| SHIP WONDERLAND         | R      |
+| SHRUNK DIVINE           | R      |
+| SIEGE MADRE             | R      |
+| SILENCE KANE            | R      |
+| SLACKER LIAISONS        | R      |
+| SLING LUKE              | R      |
+| SMOOCHY CONTROL         | R      |
+| SOLDIERS EVOLUTION      | R      |
+| SOUP WISDOM             | R      |
+| SOUTH WAIT              | R      |
+| SPIRIT FLINTSTONES      | R      |
+| SPLENDOR PATTON         | R      |
+| STAGECOACH ARMAGEDDON   | R      |
+| STAMPEDE DISTURBING     | R      |
+| STORY SIDE              | R      |
+| STRAIGHT HOURS          | R      |
+| STRANGERS GRAFFITI      | R      |
+| STREETCAR INTENTIONS    | R      |
+| SUBMARINE BED           | R      |
+| SUIT WALLS              | R      |
+| SUN CONFESSIONS         | R      |
+| SWEET BROTHERHOOD       | R      |
+| TERMINATOR CLUB         | R      |
+| TIES HUNGER             | R      |
+| TIGHTS DAWN             | R      |
+| TITANIC BOONDOCK        | R      |
+| TOMORROW HUSTLER        | R      |
+| TOWN ARK                | R      |
+| TRAIN BUNCH             | R      |
+| TROOPERS METAL          | R      |
+| TUXEDO MILE             | R      |
+| UNFAITHFUL KILL         | R      |
+| UNITED PILOT            | R      |
+| VACATION BOONDOCK       | R      |
+| VANISHED GARDEN         | R      |
+| VELVET TERMINATOR       | R      |
+| VERTIGO NORTHWEST       | R      |
+| VIRGINIAN PLUTO         | R      |
+| WASH HEAVENLY           | R      |
+| WEEKEND PERSONAL        | R      |
+| WILD APOLLO             | R      |
+| WILLOW TRACY            | R      |
+| WIND PHANTOM            | R      |
+| WINDOW SIDE             | R      |
+| WISDOM WORKER           | R      |
+| WOMEN DORADO            | R      |
+| WORKER TARZAN           | R      |
+| WORKING MICROCOSMOS     | R      |
+| YENTL IDAHO             | R      |
+| ZOOLANDER FICTION       | R      |
++-------------------------+--------+
+195 rows in set (0.00 sec)
+
+6). mysql> select title, rating from film WHERE rating <> "R";
++-----------------------------+--------+
+| title                       | rating |
++-----------------------------+--------+
+| ACADEMY DINOSAUR            | PG     |
+| ACE GOLDFINGER              | G      |
+| ADAPTATION HOLES            | NC-17  |
+| AFFAIR PREJUDICE            | G      |
+| AFRICAN EGG                 | G      |
+| AGENT TRUMAN                | PG     |
+| AIRPLANE SIERRA             | PG-13  |
+| ALABAMA DEVIL               | PG-13  |
+| ALADDIN CALENDAR            | NC-17  |
+| ALAMO VIDEOTAPE             | G      |
+| ALASKA PHANTOM              | PG     |
+| ALI FOREVER                 | PG     |
+| ALICE FANTASIA              | NC-17  |
+| ALIEN CENTER                | NC-17  |
+| ALLEY EVOLUTION             | NC-17  |
+| ALTER VICTORY               | PG-13  |
+| AMADEUS HOLY                | PG     |
+| AMISTAD MIDSUMMER           | G      |
+| ANGELS LIFE                 | G      |
+| ANNIE IDENTITY              | G      |
+| ANONYMOUS HUMAN             | NC-17  |
+| ANTHEM LUKE                 | PG-13  |
+| ANTITRUST TOMATOES          | NC-17  |
+| APACHE DIVINE               | NC-17  |
+| APOLLO TEEN                 | PG-13  |
+| ARABIA DOGMA                | NC-17  |
+| ARACHNOPHOBIA ROLLERCOASTER | PG-13  |
+| ARGONAUTS TOWN              | PG-13  |
+| ARIZONA BANG                | PG     |
+| ARK RIDGEMONT               | NC-17  |
+| ARMAGEDDON LOST             | G      |
+| ARSENIC INDEPENDENCE        | PG     |
+| ARTIST COLDBLOODED          | NC-17  |
+| ATLANTIS CAUSE              | G      |
+| ATTACKS HATE                | PG-13  |
+| ATTRACTION NEWTON           | PG-13  |
+| AUTUMN CROW                 | G      |
+| BABY HALL                   | NC-17  |
+| BACKLASH UNDEFEATED         | PG-13  |
+| BAKED CLEOPATRA             | G      |
+| BALLOON HOMEWARD            | NC-17  |
+| BALLROOM MOCKINGBIRD        | G      |
+| BANG KWAI                   | NC-17  |
+| BARBARELLA STREETCAR        | G      |
+| BAREFOOT MANCHURIAN         | G      |
+| BASIC EASY                  | PG-13  |
+| BEACH HEARTBREAKERS         | G      |
+| BEAUTY GREASE               | G      |
+| BED HIGHBALL                | NC-17  |
+| BEDAZZLED MARRIED           | PG     |
+| BEETHOVEN EXORCIST          | PG-13  |
+| BEHAVIOR RUNAWAY            | PG     |
+| BENEATH RUSH                | NC-17  |
+| BERETS AGENT                | PG-13  |
+| BETRAYED REAR               | NC-17  |
+| BIKINI BORROWERS            | NC-17  |
+| BILKO ANONYMOUS             | PG-13  |
+| BILL OTHERS                 | PG     |
+| BINGO TALENTED              | PG-13  |
+| BIRCH ANTITRUST             | PG     |
+| BIRD INDEPENDENCE           | G      |
+| BIRDCAGE CASPER             | NC-17  |
+| BIRDS PERDITION             | G      |
+| BLACKOUT PRIVATE            | PG     |
+| BLADE POLISH                | PG-13  |
+| BLANKET BEVERLY             | G      |
+| BLINDNESS GUN               | PG-13  |
+| BLOOD ARGONAUTS             | G      |
+| BLUES INSTINCT              | G      |
+| BOILED DARES                | PG     |
+| BONNIE HOLOCAUST            | G      |
+| BOONDOCK BALLROOM           | NC-17  |
+| BORN SPINAL                 | PG     |
+| BORROWERS BEDAZZLED         | G      |
+| BOUND CHEAPER               | PG     |
+| BOWFINGER GABLES            | NC-17  |
+| BRANNIGAN SUNRISE           | PG     |
+| BRAVEHEART HUMAN            | PG-13  |
+| BREAKFAST GOLDFINGER        | G      |
+| BREAKING HOME               | PG-13  |
+| BRIDE INTRIGUE              | G      |
+| BRIGHT ENCOUNTERS           | PG-13  |
+| BRINGING HYSTERICAL         | PG     |
+| BUCKET BROTHERHOOD          | PG     |
+| BUGSY SONG                  | G      |
+| BULL SHAWSHANK              | NC-17  |
+| BULWORTH COMMANDMENTS       | G      |
+| BUNCH MINDS                 | G      |
+| BUTCH PANTHER               | PG-13  |
+| BUTTERFLY CHOCOLAT          | G      |
+| CABIN FLASH                 | NC-17  |
+| CADDYSHACK JEDI             | NC-17  |
+| CALENDAR GUNFIGHT           | NC-17  |
+| CALIFORNIA BIRDS            | NC-17  |
+| CAMELOT VACATION            | NC-17  |
+| CANDLES GRAPES              | NC-17  |
+| CAPER MOTIONS               | G      |
+| CARIBBEAN LIBERTY           | NC-17  |
+| CAROL TEXAS                 | PG     |
+| CARRIE BUNCH                | PG     |
+| CASABLANCA SUPER            | G      |
+| CASPER DRAGONFLY            | PG-13  |
+| CASSIDY WYOMING             | NC-17  |
+| CASUALTIES ENCINO           | G      |
+| CAT CONEHEADS               | G      |
+| CATCH AMISTAD               | G      |
+| CELEBRITY HORN              | PG-13  |
+| CENTER DINOSAUR             | PG     |
+| CHAINSAW UPTOWN             | PG     |
+| CHAMBER ITALIAN             | NC-17  |
+| CHAMPION FLATLINERS         | PG     |
+| CHAPLIN LICENSE             | NC-17  |
+| CHARADE DUFFEL              | PG     |
+| CHASING FIGHT               | PG     |
+| CHEAPER CLYDE               | G      |
+| CHICAGO NORTH               | PG-13  |
+| CHICKEN HELLFIGHTERS        | PG     |
+| CHILL LUCK                  | PG     |
+| CHINATOWN GLADIATOR         | PG     |
+| CHISUM BEHAVIOR             | G      |
+| CHITTY LOCK                 | G      |
+| CHOCOLAT HARRY              | NC-17  |
+| CHRISTMAS MOONSHINE         | NC-17  |
+| CIDER DESIRE                | PG     |
+| CINCINATTI WHISPERER        | NC-17  |
+| CIRCUS YOUTH                | PG-13  |
+| CITIZEN SHREK               | G      |
+| CLASH FREDDY                | G      |
+| CLEOPATRA DEVIL             | PG-13  |
+| CLERKS ANGELS               | G      |
+| CLOCKWORK PARADISE          | PG-13  |
+| CLUB GRAFFITI               | PG-13  |
+| CLUE GRAIL                  | NC-17  |
+| CLYDE THEORY                | PG-13  |
+| COAST RAINBOW               | PG     |
+| COLDBLOODED DARLING         | G      |
+| COLOR PHILADELPHIA          | G      |
+| COMA HEAD                   | NC-17  |
+| COMFORTS RUSH               | NC-17  |
+| COMMAND DARLING             | PG-13  |
+| CONEHEADS SMOOCHY           | NC-17  |
+| CONFESSIONS MAGUIRE         | PG-13  |
+| CONFIDENTIAL INTERVIEW      | NC-17  |
+| CONFUSED CANDLES            | PG-13  |
+| CONGENIALITY QUEST          | PG-13  |
+| CONNECTION MICROCOSMOS      | G      |
+| CONQUERER NUTS              | G      |
+| CONSPIRACY SPIRIT           | PG-13  |
+| CONTACT ANONYMOUS           | PG-13  |
+| CONTROL ANTHEM              | G      |
+| CORE SUIT                   | PG-13  |
+| COWBOY DOOM                 | PG     |
+| CRAFT OUTFIELD              | NC-17  |
+| CRANES RESERVOIR            | NC-17  |
+| CRAZY HOME                  | PG     |
+| CREATURES SHAKESPEARE       | NC-17  |
+| CREEPERS KANE               | NC-17  |
+| CROOKED FROGMEN             | PG-13  |
+| CROSSROADS CASUALTIES       | G      |
+| CROW GREASE                 | PG     |
+| CRUELTY UNFORGIVEN          | G      |
+| CRYSTAL BREAKING            | NC-17  |
+| CURTAIN VIDEOTAPE           | PG-13  |
+| CYCLONE FAMILY              | PG     |
+| DADDY PITTSBURGH            | G      |
+| DAISY MENAGERIE             | G      |
+| DALMATIONS SWEDEN           | PG     |
+| DANCES NONE                 | NC-17  |
+| DANCING FEVER               | G      |
+| DANGEROUS UPTOWN            | PG     |
+| DARES PLUTO                 | PG-13  |
+| DARKNESS WAR                | NC-17  |
+| DARKO DORADO                | NC-17  |
+| DARLING BREAKING            | PG-13  |
+| DARN FORRESTER              | G      |
+| DAUGHTER MADIGAN            | PG-13  |
+| DAWN POND                   | PG     |
+| DAY UNFAITHFUL              | G      |
+| DAZED PUNK                  | G      |
+| DECEIVER BETRAYED           | NC-17  |
+| DEEP CRUSADE                | PG-13  |
+| DEER VIRGINIAN              | NC-17  |
+| DESIRE ALIEN                | NC-17  |
+| DESPERATE TRAINSPOTTING     | G      |
+| DESTINATION JERK            | PG-13  |
+| DESTINY SATURDAY            | G      |
+| DETECTIVE VISION            | PG-13  |
+| DIARY PANIC                 | G      |
+| DIRTY ACE                   | NC-17  |
+| DISCIPLE MOTHER             | PG     |
+| DIVIDE MONSTER              | PG-13  |
+| DIVORCE SHINING             | G      |
+| DOCTOR GRAIL                | G      |
+| DOGMA FAMILY                | G      |
+| DOLLS RAGE                  | PG-13  |
+| DONNIE ALLEY                | NC-17  |
+| DOORS PRESIDENT             | NC-17  |
+| DORADO NOTTING              | NC-17  |
+| DOWNHILL ENOUGH             | G      |
+| DOZEN LION                  | NC-17  |
+| DRACULA CRYSTAL             | G      |
+| DRAGON SQUAD                | NC-17  |
+| DRAGONFLY STRANGERS         | NC-17  |
+| DREAM PICKUP                | PG     |
+| DRIFTER COMMANDMENTS        | PG-13  |
+| DRIVER ANNIE                | PG-13  |
+| DRIVING POLISH              | NC-17  |
+| DRUMLINE CYCLONE            | G      |
+| DRUMS DYNAMITE              | PG     |
+| DUCK RACER                  | NC-17  |
+| DUDE BLINDNESS              | G      |
+| DUFFEL APOCALYPSE           | G      |
+| DUMBO LUST                  | NC-17  |
+| DWARFS ALTER                | G      |
+| DYING MAKER                 | PG     |
+| DYNAMITE TARZAN             | PG-13  |
+| EAGLES PANKY                | NC-17  |
+| EARLY HOME                  | NC-17  |
+| EARTH VISION                | NC-17  |
+| EASY GLADIATOR              | G      |
+| EDGE KISSING                | NC-17  |
+| EFFECT GLADIATOR            | PG     |
+| EGG IGBY                    | PG     |
+| EGYPT TENENBAUMS            | PG     |
+| ELEMENT FREDDY              | NC-17  |
+| ELEPHANT TROJAN             | PG-13  |
+| ELF MURDER                  | NC-17  |
+| ELIZABETH SHANE             | NC-17  |
+| EMPIRE MALKOVICH            | G      |
+| ENCINO ELF                  | G      |
+| ENCOUNTERS CURTAIN          | NC-17  |
+| ENDING CROWDS               | NC-17  |
+| ENEMY ODDS                  | NC-17  |
+| ENGLISH BULWORTH            | PG-13  |
+| ENOUGH RAGING               | NC-17  |
+| EVE RESURRECTION            | G      |
+| EVERYONE CRAFT              | PG     |
+| EVOLUTION ALTER             | PG-13  |
+| EXCITEMENT EVE              | G      |
+| EXORCIST STING              | G      |
+| EXPECATIONS NATURAL         | PG-13  |
+| EXPENDABLE STALLION         | PG     |
+| EXTRAORDINARY CONQUERER     | G      |
+| EYES DRIVING                | PG-13  |
+| FACTORY DRAGON              | PG-13  |
+| FALCON VOLUME               | PG-13  |
+| FANTASIA PARK               | G      |
+| FANTASY TROOPERS            | PG-13  |
+| FARGO GANDHI                | G      |
+| FATAL HAUNTED               | PG     |
+| FEATHERS METAL              | PG-13  |
+| FELLOWSHIP AUTUMN           | NC-17  |
+| FERRIS MOTHER               | PG     |
+| FICTION CHRISTMAS           | PG     |
+| FIDELITY DEVIL              | G      |
+| FIREBALL PHILADELPHIA       | PG     |
+| FIREHOUSE VIETNAM           | G      |
+| FLAMINGOS CONNECTICUT       | PG-13  |
+| FLASH WARS                  | NC-17  |
+| FLATLINERS KILLER           | G      |
+| FLINTSTONES HAPPINESS       | PG-13  |
+| FLOATS GARDEN               | PG-13  |
+| FLYING HOOK                 | NC-17  |
+| FOOL MOCKINGBIRD            | PG     |
+| FOREVER CANDIDATE           | NC-17  |
+| FORRESTER COMANCHEROS       | NC-17  |
+| FORWARD TEMPLE              | NC-17  |
+| FRANKENSTEIN STRANGER       | NC-17  |
+| FREDDY STORM                | NC-17  |
+| FREEDOM CLEOPATRA           | PG-13  |
+| FRENCH HOLIDAY              | PG     |
+| FRISCO FORREST              | PG     |
+| FRONTIER CABIN              | PG-13  |
+| FROST HEAD                  | PG     |
+| FULL FLATLINERS             | PG     |
+| FURY MURDER                 | PG-13  |
+| GABLES METROPOLIS           | PG     |
+| GAMES BOWFINGER             | PG-13  |
+| GANDHI KWAI                 | PG-13  |
+| GANGS PRIDE                 | PG-13  |
+| GARDEN ISLAND               | G      |
+| GASLIGHT CRUSADE            | PG     |
+| GATHERING CALENDAR          | PG-13  |
+| GENTLEMEN STAGE             | NC-17  |
+| GHOST GROUNDHOG             | G      |
+| GILBERT PELICAN             | G      |
+| GLADIATOR WESTWARD          | PG     |
+| GLASS DYING                 | G      |
+| GLEAMING JAWBREAKER         | NC-17  |
+| GLORY TRACY                 | PG-13  |
+| GODFATHER DIARY             | NC-17  |
+| GOLDFINGER SENSIBILITY      | G      |
+| GOODFELLAS SALUTE           | PG     |
+| GOSFORD DONNIE              | G      |
+| GRADUATE LORD               | G      |
+| GRAFFITI LOVE               | PG     |
+| GRAIL FRANKENSTEIN          | NC-17  |
+| GRAPES FURY                 | G      |
+| GREASE YOUTH                | G      |
+| GREATEST NORTH              | NC-17  |
+| GREEK EVERYONE              | PG     |
+| GRIT CLOCKWORK              | PG     |
+| GROOVE FICTION              | NC-17  |
+| GROUNDHOG UNCUT             | PG-13  |
+| GUMP DATE                   | NC-17  |
+| GUN BONNIE                  | G      |
+| GUNFIGHT MOON               | NC-17  |
+| GUNFIGHTER MUSSOLINI        | PG-13  |
+| HALF OUTFIELD               | PG-13  |
+| HALL CASSIDY                | NC-17  |
+| HALLOWEEN NUTS              | PG-13  |
+| HANGING DEEP                | G      |
+| HANKY OCTOBER               | NC-17  |
+| HANOVER GALAXY              | NC-17  |
+| HAPPINESS UNITED            | G      |
+| HAROLD FRENCH               | NC-17  |
+| HARPER DYING                | G      |
+| HARRY IDAHO                 | PG-13  |
+| HATE HANDICAP               | PG     |
+| HAUNTED ANTITRUST           | NC-17  |
+| HAWK CHILL                  | PG-13  |
+| HEARTBREAKERS BRIGHT        | G      |
+| HEAVEN FREEDOM              | PG     |
+| HEAVENLY GUN                | NC-17  |
+| HEAVYWEIGHTS BEAST          | G      |
+| HEDWIG ALTER                | NC-17  |
+| HELLFIGHTERS SIERRA         | PG     |
+| HILLS NEIGHBORS             | G      |
+| HOBBIT ALIEN                | PG-13  |
+| HOCUS FRIDA                 | G      |
+| HOLES BRANNIGAN             | PG     |
+| HOLIDAY GAMES               | PG-13  |
+| HOLLOW JEOPARDY             | NC-17  |
+| HOLLYWOOD ANONYMOUS         | PG     |
+| HOMICIDE PEACH              | PG-13  |
+| HOOK CHARIOTS               | G      |
+| HOOSIERS BIRDCAGE           | G      |
+| HOPE TOOTSIE                | NC-17  |
+| HORN WORKING                | PG     |
+| HOTEL HAPPINESS             | PG-13  |
+| HOURS RAGE                  | NC-17  |
+| HUMAN GRAFFITI              | NC-17  |
+| HUNCHBACK IMPOSSIBLE        | PG-13  |
+| HUNGER ROOF                 | G      |
+| HUNTER ALTER                | PG-13  |
+| HUNTING MUSKETEERS          | NC-17  |
+| HURRICANE AFFAIR            | PG     |
+| HUSTLER PARTY               | NC-17  |
+| HYDE DOCTOR                 | G      |
+| HYSTERICAL GRAIL            | PG     |
+| IDAHO LOVE                  | PG-13  |
+| IDENTITY LOVER              | PG-13  |
+| IDOLS SNATCHERS             | NC-17  |
+| IGBY MAKER                  | NC-17  |
+| IMAGE PRINCESS              | PG-13  |
+| IMPACT ALADDIN              | PG-13  |
+| IMPOSSIBLE PREJUDICE        | NC-17  |
+| INCH JET                    | NC-17  |
+| INDEPENDENCE HOTEL          | NC-17  |
+| INDIAN LOVE                 | NC-17  |
+| INFORMER DOUBLE             | NC-17  |
+| INNOCENT USUAL              | PG-13  |
+| INSECTS STONE               | NC-17  |
+| INSIDER ARIZONA             | NC-17  |
+| INSTINCT AIRPORT            | PG     |
+| INTENTIONS EMPIRE           | PG-13  |
+| INTOLERABLE INTENTIONS      | PG-13  |
+| INTRIGUE WORST              | G      |
+| INVASION CYCLONE            | PG     |
+| IRON MOON                   | PG     |
+| ISLAND EXORCIST             | NC-17  |
+| ITALIAN AFRICAN             | G      |
+| JACKET FRISCO               | PG-13  |
+| JADE BUNCH                  | NC-17  |
+| JAPANESE RUN                | G      |
+| JASON TRAP                  | NC-17  |
+| JAWBREAKER BROOKLYN         | PG     |
+| JAWS HARRY                  | G      |
+| JEDI BENEATH                | PG     |
+| JEKYLL FROGMEN              | PG     |
+| JERICHO MULAN               | NC-17  |
+| JERK PAYCHECK               | NC-17  |
+| JERSEY SASSY                | PG     |
+| JINGLE SAGEBRUSH            | PG-13  |
+| JOON NORTHWEST              | NC-17  |
+| JUGGLER HARDLY              | PG-13  |
+| JUMANJI BLADE               | G      |
+| JUMPING WRATH               | NC-17  |
+| JUNGLE CLOSER               | NC-17  |
+| KARATE MOON                 | PG-13  |
+| KENTUCKIAN GIANT            | PG     |
+| KICK SAVANNAH               | PG-13  |
+| KILL BROTHERHOOD            | G      |
+| KING EVOLUTION              | NC-17  |
+| KISS GLORY                  | PG-13  |
+| KNOCK WARLOCK               | PG-13  |
+| KWAI HOMEWARD               | PG-13  |
+| LABYRINTH LEAGUE            | PG-13  |
+| LADY STAGE                  | PG     |
+| LADYBUGS ARMAGEDDON         | NC-17  |
+| LAMBS CINCINATTI            | PG-13  |
+| LANGUAGE COWBOY             | NC-17  |
+| LAWLESS VISION              | G      |
+| LAWRENCE LOVE               | NC-17  |
+| LEAGUE HELLFIGHTERS         | PG-13  |
+| LEATHERNECKS DWARFS         | PG-13  |
+| LEBOWSKI SOLDIERS           | PG-13  |
+| LEGALLY SECRETARY           | PG     |
+| LEGEND JEDI                 | PG     |
+| LESSON CLEOPATRA            | NC-17  |
+| LIAISONS SWEET              | PG     |
+| LIBERTY MAGNIFICENT         | G      |
+| LICENSE WEEKEND             | NC-17  |
+| LIES TREATMENT              | NC-17  |
+| LIFE TWISTED                | NC-17  |
+| LION UNCUT                  | PG     |
+| LOLA AGENT                  | PG     |
+| LOLITA WORLD                | NC-17  |
+| LONELY ELEPHANT             | G      |
+| LORD ARIZONA                | PG-13  |
+| LOSER HUSTLER               | PG     |
+| LOST BIRD                   | PG-13  |
+| LOUISIANA HARRY             | PG-13  |
+| LOVELY JINGLE               | PG     |
+| LOVER TRUMAN                | G      |
+| LOVERBOY ATTACKS            | PG-13  |
+| LUCK OPUS                   | NC-17  |
+| LUCKY FLYING                | PG-13  |
+| LUKE MUMMY                  | NC-17  |
+| LUST LOCK                   | G      |
+| MADNESS ATTACKS             | PG-13  |
+| MADRE GABLES                | PG-13  |
+| MAGIC MALLRATS              | PG     |
+| MAGNOLIA FORRESTER          | PG-13  |
+| MAGUIRE APACHE              | NC-17  |
+| MAIDEN HOME                 | PG     |
+| MAJESTIC FLOATS             | PG     |
+| MAKER GABLES                | PG-13  |
+| MALKOVICH PET               | G      |
+| MALLRATS UNITED             | PG     |
+| MALTESE HOPE                | PG-13  |
+| MANCHURIAN CURTAIN          | PG     |
+| MANNEQUIN WORST             | PG-13  |
+| MARRIED GO                  | G      |
+| MARS ROMAN                  | NC-17  |
+| MASK PEACH                  | NC-17  |
+| MASKED BUBBLE               | PG-13  |
+| MASSAGE IMAGE               | PG     |
+| MATRIX SNOWMAN              | PG-13  |
+| MEET CHOCOLATE              | G      |
+| MEMENTO ZOOLANDER           | NC-17  |
+| MENAGERIE RUSHMORE          | G      |
+| MERMAID INSECTS             | NC-17  |
+| METAL ARMAGEDDON            | PG-13  |
+| METROPOLIS COMA             | PG-13  |
+| MICROCOSMOS PARADISE        | PG-13  |
+| MIDNIGHT WESTWARD           | G      |
+| MIDSUMMER GROUNDHOG         | G      |
+| MIGHTY LUCK                 | PG     |
+| MILE MULAN                  | PG     |
+| MILLION ACE                 | PG-13  |
+| MINDS TRUMAN                | PG-13  |
+| MINE TITANS                 | PG-13  |
+| MINORITY KISS               | G      |
+| MIRACLE VIRTUAL             | PG-13  |
+| MISSION ZOOLANDER           | PG-13  |
+| MIXED DOORS                 | PG-13  |
+| MOB DUFFEL                  | G      |
+| MOCKINGBIRD HOLLYWOOD       | PG     |
+| MOD SECRETARY               | NC-17  |
+| MODEL FISH                  | NC-17  |
+| MODERN DORADO               | PG     |
+| MONEY HAROLD                | PG     |
+| MONSOON CAUSE               | PG     |
+| MONSTER SPARTACUS           | PG     |
+| MONTEREY LABYRINTH          | G      |
+| MONTEZUMA COMMAND           | NC-17  |
+| MOON BUNCH                  | PG     |
+| MOONSHINE CABIN             | PG-13  |
+| MOONWALKER FOOL             | G      |
+| MOSQUITO ARMAGEDDON         | G      |
+| MOTIONS DETAILS             | PG     |
+| MOULIN WAKE                 | PG-13  |
+| MOURNING PURPLE             | PG     |
+| MOVIE SHAKESPEARE           | PG     |
+| MULAN MOON                  | G      |
+| MULHOLLAND BEAST            | PG     |
+| MUMMY CREATURES             | NC-17  |
+| MUPPET MILE                 | PG     |
+| MURDER ANTITRUST            | PG     |
+| MUSCLE BRIGHT               | G      |
+| MUSKETEERS WAIT             | PG     |
+| MUSSOLINI SPOILERS          | G      |
+| MYSTIC TRUMAN               | NC-17  |
+| NAME DETECTIVE              | PG-13  |
+| NASH CHOCOLAT               | PG-13  |
+| NATIONAL STORY              | NC-17  |
+| NATURAL STOCK               | PG-13  |
+| NECKLACE OUTBREAK           | PG     |
+| NEMO CAMPUS                 | NC-17  |
+| NETWORK PEAK                | PG-13  |
+| NEWSIES STORY               | G      |
+| NEWTON LABYRINTH            | PG     |
+| NIGHTMARE CHILL             | PG     |
+| NONE SPIKING                | NC-17  |
+| NOON PAPI                   | G      |
+| NORTH TEQUILA               | NC-17  |
+| NORTHWEST POLISH            | PG     |
+| NOTORIOUS REUNION           | NC-17  |
+| NOTTING SPEAKEASY           | PG-13  |
+| NOVOCAINE FLIGHT            | G      |
+| NUTS TIES                   | NC-17  |
+| OCTOBER SUBMARINE           | PG-13  |
+| ODDS BOOGIE                 | NC-17  |
+| OKLAHOMA JUMANJI            | PG     |
+| OLEANDER CLUE               | PG     |
+| OPEN AFRICAN                | PG     |
+| OPERATION OPERATION         | G      |
+| OPPOSITE NECKLACE           | PG     |
+| ORANGE GRAPES               | PG-13  |
+| ORDER BETRAYED              | PG-13  |
+| OSCAR GOLD                  | PG     |
+| OTHERS SOUP                 | PG     |
+| OUTBREAK DIVINE             | NC-17  |
+| OUTFIELD MASSACRE           | NC-17  |
+| OUTLAW HANKY                | PG-13  |
+| PACIFIC AMISTAD             | G      |
+| PACKER MADIGAN              | PG-13  |
+| PANIC CLUB                  | G      |
+| PANKY SUBMARINE             | G      |
+| PANTHER REDS                | NC-17  |
+| PAPI NECKLACE               | PG     |
+| PARADISE SABRINA            | PG-13  |
+| PARIS WEEKEND               | PG-13  |
+| PARK CITIZEN                | PG-13  |
+| PARTY KNOCK                 | PG     |
+| PAST SUICIDES               | PG-13  |
+| PATHS CONTROL               | PG     |
+| PATIENT SISTER              | NC-17  |
+| PATRIOT ROMAN               | PG     |
+| PATTON INTERVIEW            | PG     |
+| PAYCHECK WAIT               | PG-13  |
+| PEACH INNOCENT              | PG-13  |
+| PEAK FOREVER                | PG     |
+| PEARL DESTINY               | NC-17  |
+| PELICAN COMFORTS            | PG     |
+| PERDITION FARGO             | NC-17  |
+| PERFECT GROOVE              | PG-13  |
+| PERSONAL LADYBUGS           | PG-13  |
+| PET HAUNTING                | PG     |
+| PHANTOM GLORY               | NC-17  |
+| PHILADELPHIA WIFE           | PG-13  |
+| PIANIST OUTFIELD            | NC-17  |
+| PICKUP DRIVING              | G      |
+| PILOT HOOSIERS              | PG     |
+| PINOCCHIO SIMON             | PG     |
+| PIRATES ROXANNE             | PG     |
+| PITTSBURGH HUNCHBACK        | PG-13  |
+| PITY BOUND                  | NC-17  |
+| PIZZA JUMANJI               | NC-17  |
+| PLATOON INSTINCT            | PG-13  |
+| POCUS PULP                  | NC-17  |
+| POLISH BROOKLYN             | PG     |
+| POLLOCK DELIVERANCE         | PG     |
+| POND SEATTLE                | PG-13  |
+| POSEIDON FOREVER            | PG-13  |
+| POTLUCK MIXED               | G      |
+| POTTER CONNECTICUT          | PG     |
+| PREJUDICE OLEANDER          | PG-13  |
+| PRESIDENT BANG              | PG     |
+| PRIDE ALAMO                 | NC-17  |
+| PRIMARY GLASS               | G      |
+| PRINCESS GIANT              | NC-17  |
+| PRIVATE DROP                | PG     |
+| PSYCHO SHRUNK               | PG-13  |
+| PULP BEVERLY                | G      |
+| PUNK DIVORCE                | PG     |
+| PURE RUNNER                 | NC-17  |
+| QUEEN LUKE                  | PG     |
+| RACER EGG                   | NC-17  |
+| RAIDERS ANTITRUST           | PG-13  |
+| RAINBOW SHOCK               | PG     |
+| RANDOM GO                   | NC-17  |
+| RANGE MOONWALKER            | PG     |
+| REAP UNFAITHFUL             | PG-13  |
+| REAR TRADING                | NC-17  |
+| REBEL AIRPORT               | G      |
+| RECORDS ZORRO               | PG     |
+| REDEMPTION COMFORTS         | NC-17  |
+| REDS POCUS                  | PG-13  |
+| REEF SALUTE                 | NC-17  |
+| REIGN GENTLEMEN             | PG-13  |
+| RESERVOIR ADAPTATION        | PG-13  |
+| RESURRECTION SILVERADO      | PG     |
+| RIDER CADDYSHACK            | PG     |
+| RIDGEMONT SUBMARINE         | PG-13  |
+| RIGHT CRANES                | PG-13  |
+| RINGS HEARTBREAKERS         | G      |
+| RIVER OUTLAW                | PG-13  |
+| ROBBERS JOON                | PG-13  |
+| ROCK INSTINCT               | G      |
+| ROCKETEER MOTHER            | PG-13  |
+| ROCKY WAR                   | PG-13  |
+| ROLLERCOASTER BRINGING      | PG-13  |
+| ROMAN PUNK                  | NC-17  |
+| ROOM ROMAN                  | PG     |
+| ROOTS REMEMBER              | PG-13  |
+| ROSES TREASURE              | PG-13  |
+| ROUGE SQUAD                 | NC-17  |
+| RUGRATS SHAKESPEARE         | PG-13  |
+| RUNAWAY TENENBAUMS          | NC-17  |
+| RUNNER MADIGAN              | NC-17  |
+| RUSH GOODFELLAS             | PG     |
+| RUSHMORE MERMAID            | PG-13  |
+| SABRINA MIDNIGHT            | PG     |
+| SADDLE ANTITRUST            | PG-13  |
+| SAGEBRUSH CLUELESS          | G      |
+| SAINTS BRIDE                | G      |
+| SAMURAI LION                | G      |
+| SANTA PARIS                 | PG     |
+| SASSY PACKER                | G      |
+| SATISFACTION CONFIDENTIAL   | G      |
+| SATURDAY LAMBS              | G      |
+| SAVANNAH TOWN               | PG-13  |
+| SCALAWAG DUCK               | NC-17  |
+| SCARFACE BANG               | PG-13  |
+| SCHOOL JACKET               | PG-13  |
+| SCISSORHANDS SLUMS          | G      |
+| SCORPION APOLLO             | NC-17  |
+| SEA VIRGIN                  | PG     |
+| SEABISCUIT PUNK             | NC-17  |
+| SEARCHERS WAIT              | NC-17  |
+| SEATTLE EXPECATIONS         | PG-13  |
+| SECRET GROUNDHOG            | PG     |
+| SECRETARY ROUGE             | PG     |
+| SECRETS PARADISE            | G      |
+| SENSIBILITY REAR            | PG     |
+| SHAKESPEARE SADDLE          | PG-13  |
+| SHANE DARKNESS              | PG     |
+| SHANGHAI TYCOON             | PG     |
+| SHAWSHANK BUBBLE            | PG     |
+| SHINING ROSES               | G      |
+| SHOCK CABIN                 | PG-13  |
+| SHOOTIST SUPERFLY           | PG-13  |
+| SHOW LORD                   | PG-13  |
+| SHREK LICENSE               | PG-13  |
+| SIDE ARK                    | G      |
+| SIERRA DIVIDE               | NC-17  |
+| SILVERADO GOLDFINGER        | PG     |
+| SIMON NORTH                 | NC-17  |
+| SINNERS ATLANTIS            | PG-13  |
+| SISTER FREDDY               | PG-13  |
+| SKY MIRACLE                 | PG     |
+| SLEEPING SUSPECTS           | PG-13  |
+| SLEEPLESS MONSOON           | G      |
+| SLEEPY JAPANESE             | PG     |
+| SLEUTH ORIENT               | NC-17  |
+| SLIPPER FIDELITY            | PG-13  |
+| SLUMS DUCK                  | PG     |
+| SMILE EARRING               | G      |
+| SMOKING BARBARELLA          | PG-13  |
+| SNATCH SLIPPER              | PG     |
+| SNATCHERS MONTEZUMA         | PG-13  |
+| SNOWMAN ROLLERCOASTER       | G      |
+| SOMETHING DUCK              | NC-17  |
+| SONG HEDWIG                 | PG-13  |
+| SONS INTERVIEW              | NC-17  |
+| SORORITY QUEEN              | NC-17  |
+| SPARTACUS CHEAPER           | NC-17  |
+| SPEAKEASY DATE              | PG-13  |
+| SPEED SUIT                  | PG-13  |
+| SPICE SORORITY              | NC-17  |
+| SPIKING ELEMENT             | G      |
+| SPINAL ROCKY                | PG-13  |
+| SPIRITED CASUALTIES         | PG-13  |
+| SPLASH GUMP                 | PG     |
+| SPOILERS HELLFIGHTERS       | G      |
+| SPY MILE                    | PG-13  |
+| SQUAD FISH                  | PG     |
+| STAGE WORLD                 | PG     |
+| STALLION SUNDANCE           | PG-13  |
+| STAR OPERATION              | PG     |
+| STATE WASTELAND             | NC-17  |
+| STEEL SANTA                 | NC-17  |
+| STEERS ARMAGEDDON           | PG     |
+| STEPMOM DREAM               | NC-17  |
+| STING PERSONAL              | NC-17  |
+| STOCK GLASS                 | PG     |
+| STONE FIRE                  | G      |
+| STORM HAPPINESS             | NC-17  |
+| STRANGELOVE DESIRE          | NC-17  |
+| STRANGER STRANGERS          | G      |
+| STREAK RIDGEMONT            | PG-13  |
+| STRICTLY SCARFACE           | PG-13  |
+| SUGAR WONKA                 | PG     |
+| SUICIDES SILENCE            | G      |
+| SUMMER SCARFACE             | G      |
+| SUNDANCE INVASION           | NC-17  |
+| SUNRISE LEAGUE              | PG-13  |
+| SUNSET RACER                | NC-17  |
+| SUPER WYOMING               | PG     |
+| SUPERFLY TRIP               | PG     |
+| SUSPECTS QUILLS             | PG     |
+| SWARM GOLD                  | PG-13  |
+| SWEDEN SHINING              | PG     |
+| SWEETHEARTS SUSPECTS        | G      |
+| TADPOLE PARK                | PG     |
+| TALENTED HOMICIDE           | PG     |
+| TARZAN VIDEOTAPE            | PG-13  |
+| TAXI KICK                   | PG-13  |
+| TEEN APOLLO                 | G      |
+| TELEGRAPH VOYAGE            | PG     |
+| TELEMARK HEARTBREAKERS      | PG-13  |
+| TEMPLE ATTRACTION           | PG     |
+| TENENBAUMS COMMAND          | PG-13  |
+| TEQUILA PAST                | PG     |
+| TEXAS WATCH                 | NC-17  |
+| THEORY MERMAID              | PG-13  |
+| THIEF PELICAN               | PG-13  |
+| THIN SAGEBRUSH              | PG-13  |
+| TIMBERLAND SKY              | G      |
+| TITANS JERK                 | PG     |
+| TOMATOES HELLFIGHTERS       | PG     |
+| TOOTSIE PILOT               | PG     |
+| TORQUE BOUND                | G      |
+| TOURIST PELICAN             | PG-13  |
+| TOWERS HURRICANE            | NC-17  |
+| TRACY CIDER                 | G      |
+| TRADING PINOCCHIO           | PG     |
+| TRAFFIC HOBBIT              | G      |
+| TRAINSPOTTING STRANGERS     | PG-13  |
+| TRAMP OTHERS                | PG     |
+| TRANSLATION SUMMER          | PG-13  |
+| TRAP GUYS                   | G      |
+| TREASURE COMMAND            | PG-13  |
+| TREATMENT JEKYLL            | PG     |
+| TRIP NEWTON                 | PG-13  |
+| TROJAN TOMORROW             | PG     |
+| TROUBLE DATE                | PG     |
+| TRUMAN CRAZY                | G      |
+| TURN STAR                   | G      |
+| TWISTED PIRATES             | PG     |
+| TYCOON GATHERING            | G      |
+| UNBREAKABLE KARATE          | G      |
+| UNCUT SUICIDES              | PG-13  |
+| UNDEFEATED DALMATIONS       | PG-13  |
+| UNFORGIVEN ZOOLANDER        | PG     |
+| UNTOUCHABLES SUNRISE        | NC-17  |
+| UPRISING UPTOWN             | NC-17  |
+| UPTOWN YOUNG                | PG     |
+| USUAL UNTOUCHABLES          | PG-13  |
+| VALENTINE VANISHING         | PG-13  |
+| VALLEY PACKER               | G      |
+| VAMPIRE WHALE               | NC-17  |
+| VANILLA DAY                 | NC-17  |
+| VANISHING ROCKY             | NC-17  |
+| VARSITY TRIP                | NC-17  |
+| VICTORY ACADEMY             | PG-13  |
+| VIDEOTAPE ARSENIC           | NC-17  |
+| VIETNAM SMOOCHY             | PG-13  |
+| VILLAIN DESPERATE           | PG-13  |
+| VIRGIN DAISY                | PG-13  |
+| VIRTUAL SPOILERS            | NC-17  |
+| VISION TORQUE               | PG-13  |
+| VOICE PEACH                 | PG-13  |
+| VOLCANO TEXAS               | NC-17  |
+| VOLUME HOUSE                | PG     |
+| VOYAGE LEGALLY              | PG-13  |
+| WAGON JAWS                  | PG     |
+| WAIT CIDER                  | PG-13  |
+| WAKE JAWS                   | G      |
+| WALLS ARTIST                | PG     |
+| WANDA CHAMBER               | PG-13  |
+| WAR NOTTING                 | G      |
+| WARDROBE PHANTOM            | G      |
+| WARLOCK WEREWOLF            | G      |
+| WARS PLUTO                  | G      |
+| WASTELAND DIVINE            | PG     |
+| WATCH TRACY                 | PG     |
+| WATERFRONT DELIVERANCE      | G      |
+| WATERSHIP FRONTIER          | G      |
+| WEDDING APOLLO              | PG     |
+| WEREWOLF LOLA               | G      |
+| WEST LION                   | G      |
+| WESTWARD SEABISCUIT         | NC-17  |
+| WHALE BIKINI                | PG-13  |
+| WHISPERER GIANT             | PG-13  |
+| WIFE TURN                   | NC-17  |
+| WITCHES PANIC               | NC-17  |
+| WIZARD COLDBLOODED          | PG     |
+| WOLVES DESIRE               | NC-17  |
+| WON DARES                   | PG     |
+| WONDERFUL DROP              | NC-17  |
+| WONDERLAND CHRISTMAS        | PG     |
+| WONKA SEA                   | NC-17  |
+| WORDS HUNTER                | PG     |
+| WORLD LEATHERNECKS          | PG-13  |
+| WORST BANGER                | PG     |
+| WRATH MILE                  | NC-17  |
+| WRONG BEHAVIOR              | PG-13  |
+| WYOMING STORM               | PG-13  |
+| YOUNG LANGUAGE              | G      |
+| YOUTH KICK                  | NC-17  |
+| ZHIVAGO CORE                | NC-17  |
+| ZORRO ARK                   | NC-17  |
++-----------------------------+--------+
+805 rows in set (0.00 sec)
+
+7). mysql> select * from film order by length asc limit 10;
++---------+---------------------+--------------------------------------------------------------------------------------------------------------+--------------+-------------+----------------------+-----------------+-------------+--------+------------------+--------+-----------------------------------------------+---------------------+
+| film_id | title               | description                                                                                                  | release_year | language_id | original_language_id | rental_duration | rental_rate | length | replacement_cost | rating | special_features                              | last_update         |
++---------+---------------------+--------------------------------------------------------------------------------------------------------------+--------------+-------------+----------------------+-----------------+-------------+--------+------------------+--------+-----------------------------------------------+---------------------+
+|      15 | ALIEN CENTER        | A Brilliant Drama of a Cat And a Mad Scientist who must Battle a Feminist in A MySQL Convention              |         2006 |           1 |                 NULL |               5 |        2.99 |     46 |            10.99 | NC-17  | Trailers,Commentaries,Behind the Scenes       | 2006-02-15 05:03:42 |
+|     504 | KWAI HOMEWARD       | A Amazing Drama of a Car And a Squirrel who must Pursue a Car in Soviet Georgia                              |         2006 |           1 |                 NULL |               5 |        0.99 |     46 |            25.99 | PG-13  | Trailers,Commentaries                         | 2006-02-15 05:03:42 |
+|     469 | IRON MOON           | A Fast-Paced Documentary of a Mad Cow And a Boy who must Pursue a Dentist in A Baloon                        |         2006 |           1 |                 NULL |               7 |        4.99 |     46 |            27.99 | PG     | Commentaries,Behind the Scenes                | 2006-02-15 05:03:42 |
+|     730 | RIDGEMONT SUBMARINE | A Unbelieveable Drama of a Waitress And a Composer who must Sink a Mad Cow in Ancient Japan                  |         2006 |           1 |                 NULL |               3 |        0.99 |     46 |            28.99 | PG-13  | Commentaries,Deleted Scenes,Behind the Scenes | 2006-02-15 05:03:42 |
+|     505 | LABYRINTH LEAGUE    | A Awe-Inspiring Saga of a Composer And a Frisbee who must Succumb a Pioneer in The Sahara Desert             |         2006 |           1 |                 NULL |               6 |        2.99 |     46 |            24.99 | PG-13  | Commentaries,Behind the Scenes                | 2006-02-15 05:03:42 |
+|     869 | SUSPECTS QUILLS     | A Emotional Epistle of a Pioneer And a Crocodile who must Battle a Man in A Manhattan Penthouse              |         2006 |           1 |                 NULL |               4 |        2.99 |     47 |            22.99 | PG     | Trailers                                      | 2006-02-15 05:03:42 |
+|     398 | HANOVER GALAXY      | A Stunning Reflection of a Girl And a Secret Agent who must Succumb a Boy in A MySQL Convention              |         2006 |           1 |                 NULL |               5 |        4.99 |     47 |            21.99 | NC-17  | Commentaries,Deleted Scenes,Behind the Scenes | 2006-02-15 05:03:42 |
+|     407 | HAWK CHILL          | A Action-Packed Drama of a Mad Scientist And a Composer who must Outgun a Car in Australia                   |         2006 |           1 |                 NULL |               5 |        0.99 |     47 |            12.99 | PG-13  | Behind the Scenes                             | 2006-02-15 05:03:42 |
+|     247 | DOWNHILL ENOUGH     | A Emotional Tale of a Pastry Chef And a Forensic Psychologist who must Succumb a Monkey in The Sahara Desert |         2006 |           1 |                 NULL |               3 |        0.99 |     47 |            19.99 | G      | Trailers,Commentaries,Deleted Scenes          | 2006-02-15 05:03:42 |
+|     393 | HALLOWEEN NUTS      | A Amazing Panorama of a Forensic Psychologist And a Technical Writer who must Fight a Dentist in A U-Boat    |         2006 |           1 |                 NULL |               6 |        2.99 |     47 |            19.99 | PG-13  | Deleted Scenes                                | 2006-02-15 05:03:42 |
++---------+---------------------+--------------------------------------------------------------------------------------------------------------+--------------+-------------+----------------------+-----------------+-------------+--------+------------------+--------+-----------------------------------------------+---------------------+
+10 rows in set (0.00 sec)
+
+
+8). mysql> select title, special_features from film where special_features like '%deleted scenes%';
++-----------------------------+--------------------------------------------------------+
+| title                       | special_features                                       |
++-----------------------------+--------------------------------------------------------+
+| ACADEMY DINOSAUR            | Deleted Scenes,Behind the Scenes                       |
+| ACE GOLDFINGER              | Trailers,Deleted Scenes                                |
+| ADAPTATION HOLES            | Trailers,Deleted Scenes                                |
+| AFRICAN EGG                 | Deleted Scenes                                         |
+| AGENT TRUMAN                | Deleted Scenes                                         |
+| AIRPLANE SIERRA             | Trailers,Deleted Scenes                                |
+| ALABAMA DEVIL               | Trailers,Deleted Scenes                                |
+| ALADDIN CALENDAR            | Trailers,Deleted Scenes                                |
+| ALASKA PHANTOM              | Commentaries,Deleted Scenes                            |
+| ALI FOREVER                 | Deleted Scenes,Behind the Scenes                       |
+| ALICE FANTASIA              | Trailers,Deleted Scenes,Behind the Scenes              |
+| AMADEUS HOLY                | Commentaries,Deleted Scenes,Behind the Scenes          |
+| AMELIE HELLFIGHTERS         | Commentaries,Deleted Scenes,Behind the Scenes          |
+| ANACONDA CONFESSIONS        | Trailers,Deleted Scenes                                |
+| ANNIE IDENTITY              | Commentaries,Deleted Scenes                            |
+| ANONYMOUS HUMAN             | Deleted Scenes,Behind the Scenes                       |
+| ANTHEM LUKE                 | Deleted Scenes,Behind the Scenes                       |
+| ANTITRUST TOMATOES          | Trailers,Commentaries,Deleted Scenes                   |
+| ANYTHING SAVANNAH           | Trailers,Deleted Scenes,Behind the Scenes              |
+| APACHE DIVINE               | Commentaries,Deleted Scenes,Behind the Scenes          |
+| APOLLO TEEN                 | Trailers,Commentaries,Deleted Scenes,Behind the Scenes |
+| ARABIA DOGMA                | Commentaries,Deleted Scenes                            |
+| ARACHNOPHOBIA ROLLERCOASTER | Trailers,Deleted Scenes,Behind the Scenes              |
+| ARIZONA BANG                | Trailers,Deleted Scenes                                |
+| ARK RIDGEMONT               | Trailers,Commentaries,Deleted Scenes,Behind the Scenes |
+| ARSENIC INDEPENDENCE        | Trailers,Deleted Scenes,Behind the Scenes              |
+| AUTUMN CROW                 | Trailers,Commentaries,Deleted Scenes,Behind the Scenes |
+| BALLOON HOMEWARD            | Deleted Scenes                                         |
+| BALLROOM MOCKINGBIRD        | Commentaries,Deleted Scenes                            |
+| BANG KWAI                   | Commentaries,Deleted Scenes,Behind the Scenes          |
+| BANGER PINOCCHIO            | Trailers,Commentaries,Deleted Scenes                   |
+| BASIC EASY                  | Deleted Scenes                                         |
+| BEACH HEARTBREAKERS         | Deleted Scenes,Behind the Scenes                       |
+| BEAR GRACELAND              | Deleted Scenes                                         |
+| BEAST HUNCHBACK             | Deleted Scenes,Behind the Scenes                       |
+| BED HIGHBALL                | Trailers,Commentaries,Deleted Scenes                   |
+| BEDAZZLED MARRIED           | Trailers,Deleted Scenes,Behind the Scenes              |
+| BEHAVIOR RUNAWAY            | Trailers,Deleted Scenes,Behind the Scenes              |
+| BENEATH RUSH                | Commentaries,Deleted Scenes                            |
+| BERETS AGENT                | Deleted Scenes                                         |
+| BETRAYED REAR               | Commentaries,Deleted Scenes,Behind the Scenes          |
+| BIKINI BORROWERS            | Commentaries,Deleted Scenes                            |
+| BILKO ANONYMOUS             | Commentaries,Deleted Scenes,Behind the Scenes          |
+| BIRCH ANTITRUST             | Trailers,Commentaries,Deleted Scenes                   |
+| BIRDCAGE CASPER             | Commentaries,Deleted Scenes,Behind the Scenes          |
+| BLACKOUT PRIVATE            | Trailers,Deleted Scenes                                |
+| BLUES INSTINCT              | Trailers,Deleted Scenes,Behind the Scenes              |
+| BONNIE HOLOCAUST            | Deleted Scenes                                         |
+| BORN SPINAL                 | Trailers,Commentaries,Deleted Scenes                   |
+| BORROWERS BEDAZZLED         | Commentaries,Deleted Scenes,Behind the Scenes          |
+| BOWFINGER GABLES            | Trailers,Deleted Scenes                                |
+| BRAVEHEART HUMAN            | Trailers,Deleted Scenes                                |
+| BREAKFAST GOLDFINGER        | Trailers,Commentaries,Deleted Scenes                   |
+| BUBBLE GROSSE               | Trailers,Commentaries,Deleted Scenes,Behind the Scenes |
+| BUCKET BROTHERHOOD          | Commentaries,Deleted Scenes                            |
+| BULL SHAWSHANK              | Deleted Scenes                                         |
+| BUTCH PANTHER               | Trailers,Commentaries,Deleted Scenes                   |
+| CABIN FLASH                 | Commentaries,Deleted Scenes                            |
+| CADDYSHACK JEDI             | Commentaries,Deleted Scenes                            |
+| CALIFORNIA BIRDS            | Trailers,Commentaries,Deleted Scenes                   |
+| CAMELOT VACATION            | Trailers,Commentaries,Deleted Scenes,Behind the Scenes |
+| CANDIDATE PERDITION         | Deleted Scenes,Behind the Scenes                       |
+| CANDLES GRAPES              | Trailers,Deleted Scenes                                |
+| CANYON STOCK                | Trailers,Deleted Scenes                                |
+| CAPER MOTIONS               | Trailers,Commentaries,Deleted Scenes                   |
+| CARIBBEAN LIBERTY           | Commentaries,Deleted Scenes                            |
+| CASABLANCA SUPER            | Trailers,Deleted Scenes,Behind the Scenes              |
+| CAT CONEHEADS               | Commentaries,Deleted Scenes                            |
+| CAUSE DATE                  | Commentaries,Deleted Scenes,Behind the Scenes          |
+| CELEBRITY HORN              | Deleted Scenes,Behind the Scenes                       |
+| CENTER DINOSAUR             | Deleted Scenes                                         |
+| CHAINSAW UPTOWN             | Deleted Scenes,Behind the Scenes                       |
+| CHANCE RESURRECTION         | Commentaries,Deleted Scenes,Behind the Scenes          |
+| CHARADE DUFFEL              | Trailers,Deleted Scenes,Behind the Scenes              |
+| CHARIOTS CONSPIRACY         | Deleted Scenes,Behind the Scenes                       |
+| CHICAGO NORTH               | Deleted Scenes,Behind the Scenes                       |
+| CHICKEN HELLFIGHTERS        | Trailers,Commentaries,Deleted Scenes,Behind the Scenes |
+| CHILL LUCK                  | Trailers,Commentaries,Deleted Scenes                   |
+| CHINATOWN GLADIATOR         | Trailers,Commentaries,Deleted Scenes                   |
+| CINCINATTI WHISPERER        | Deleted Scenes                                         |
+| CIRCUS YOUTH                | Trailers,Deleted Scenes,Behind the Scenes              |
+| CITIZEN SHREK               | Commentaries,Deleted Scenes                            |
+| CLASH FREDDY                | Commentaries,Deleted Scenes                            |
+| CLEOPATRA DEVIL             | Trailers,Deleted Scenes,Behind the Scenes              |
+| CLOCKWORK PARADISE          | Trailers,Commentaries,Deleted Scenes,Behind the Scenes |
+| CLUB GRAFFITI               | Trailers,Deleted Scenes                                |
+| CLUELESS BUCKET             | Trailers,Deleted Scenes,Behind the Scenes              |
+| CLYDE THEORY                | Commentaries,Deleted Scenes,Behind the Scenes          |
+| COAST RAINBOW               | Trailers,Commentaries,Deleted Scenes,Behind the Scenes |
+| COLDBLOODED DARLING         | Trailers,Deleted Scenes                                |
+| COMMANDMENTS EXPRESS        | Trailers,Commentaries,Deleted Scenes                   |
+| CONEHEADS SMOOCHY           | Deleted Scenes,Behind the Scenes                       |
+| CONFUSED CANDLES            | Trailers,Commentaries,Deleted Scenes,Behind the Scenes |
+| CONNECTICUT TRAMP           | Commentaries,Deleted Scenes                            |
+| CONNECTION MICROCOSMOS      | Deleted Scenes,Behind the Scenes                       |
+| CONQUERER NUTS              | Commentaries,Deleted Scenes,Behind the Scenes          |
+| CORE SUIT                   | Deleted Scenes                                         |
+| COWBOY DOOM                 | Commentaries,Deleted Scenes,Behind the Scenes          |
+| CRAFT OUTFIELD              | Deleted Scenes,Behind the Scenes                       |
+| CRAZY HOME                  | Commentaries,Deleted Scenes                            |
+| CREATURES SHAKESPEARE       | Trailers,Deleted Scenes                                |
+| CROOKED FROGMEN             | Commentaries,Deleted Scenes,Behind the Scenes          |
+| CROSSING DIVORCE            | Commentaries,Deleted Scenes,Behind the Scenes          |
+| CRUELTY UNFORGIVEN          | Deleted Scenes,Behind the Scenes                       |
+| CURTAIN VIDEOTAPE           | Trailers,Commentaries,Deleted Scenes,Behind the Scenes |
+| CYCLONE FAMILY              | Trailers,Deleted Scenes                                |
+| DADDY PITTSBURGH            | Deleted Scenes,Behind the Scenes                       |
+| DALMATIONS SWEDEN           | Trailers,Commentaries,Deleted Scenes                   |
+| DANCES NONE                 | Trailers,Commentaries,Deleted Scenes,Behind the Scenes |
+| DARKNESS WAR                | Deleted Scenes,Behind the Scenes                       |
+| DARKO DORADO                | Trailers,Commentaries,Deleted Scenes,Behind the Scenes |
+| DARN FORRESTER              | Deleted Scenes                                         |
+| DAWN POND                   | Trailers,Deleted Scenes,Behind the Scenes              |
+| DAY UNFAITHFUL              | Trailers,Commentaries,Deleted Scenes,Behind the Scenes |
+| DAZED PUNK                  | Commentaries,Deleted Scenes                            |
+| DECEIVER BETRAYED           | Trailers,Commentaries,Deleted Scenes,Behind the Scenes |
+| DEER VIRGINIAN              | Deleted Scenes                                         |
+| DELIVERANCE MULHOLLAND      | Deleted Scenes                                         |
+| DESIRE ALIEN                | Deleted Scenes                                         |
+| DESPERATE TRAINSPOTTING     | Deleted Scenes                                         |
+| DETAILS PACKER              | Commentaries,Deleted Scenes                            |
+| DIRTY ACE                   | Commentaries,Deleted Scenes,Behind the Scenes          |
+| DISCIPLE MOTHER             | Trailers,Deleted Scenes,Behind the Scenes              |
+| DIVORCE SHINING             | Trailers,Commentaries,Deleted Scenes                   |
+| DOLLS RAGE                  | Commentaries,Deleted Scenes                            |
+| DOORS PRESIDENT             | Trailers,Commentaries,Deleted Scenes,Behind the Scenes |
+| DOUBLE WRATH                | Trailers,Deleted Scenes,Behind the Scenes              |
+| DOUBTFIRE LABYRINTH         | Deleted Scenes,Behind the Scenes                       |
+| DOWNHILL ENOUGH             | Trailers,Commentaries,Deleted Scenes                   |
+| DOZEN LION                  | Commentaries,Deleted Scenes,Behind the Scenes          |
+| DRAGON SQUAD                | Deleted Scenes,Behind the Scenes                       |
+| DRIVER ANNIE                | Trailers,Deleted Scenes,Behind the Scenes              |
+| DRIVING POLISH              | Trailers,Deleted Scenes                                |
+| DRUMLINE CYCLONE            | Commentaries,Deleted Scenes,Behind the Scenes          |
+| DUDE BLINDNESS              | Trailers,Deleted Scenes                                |
+| DWARFS ALTER                | Commentaries,Deleted Scenes                            |
+| DYNAMITE TARZAN             | Deleted Scenes                                         |
+| EARTH VISION                | Trailers,Commentaries,Deleted Scenes                   |
+| EDGE KISSING                | Deleted Scenes                                         |
+| EGYPT TENENBAUMS            | Commentaries,Deleted Scenes,Behind the Scenes          |
+| ELIZABETH SHANE             | Trailers,Deleted Scenes,Behind the Scenes              |
+| EMPIRE MALKOVICH            | Deleted Scenes                                         |
+| ENGLISH BULWORTH            | Deleted Scenes                                         |
+| ENTRAPMENT SATISFACTION     | Commentaries,Deleted Scenes,Behind the Scenes          |
+| EVE RESURRECTION            | Trailers,Commentaries,Deleted Scenes                   |
+| EXORCIST STING              | Commentaries,Deleted Scenes,Behind the Scenes          |
+| EXPECATIONS NATURAL         | Deleted Scenes                                         |
+| EXTRAORDINARY CONQUERER     | Trailers,Commentaries,Deleted Scenes                   |
+| FACTORY DRAGON              | Trailers,Commentaries,Deleted Scenes                   |
+| FARGO GANDHI                | Deleted Scenes                                         |
+| FEATHERS METAL              | Trailers,Deleted Scenes                                |
+| FELLOWSHIP AUTUMN           | Deleted Scenes,Behind the Scenes                       |
+| FERRIS MOTHER               | Trailers,Deleted Scenes,Behind the Scenes              |
+| FEUD FROGMEN                | Trailers,Commentaries,Deleted Scenes,Behind the Scenes |
+| FEVER EMPIRE                | Commentaries,Deleted Scenes                            |
+| FICTION CHRISTMAS           | Trailers,Commentaries,Deleted Scenes,Behind the Scenes |
+| FIDDLER LOST                | Deleted Scenes,Behind the Scenes                       |
+| FIDELITY DEVIL              | Trailers,Deleted Scenes,Behind the Scenes              |
+| FIGHT JAWBREAKER            | Trailers,Commentaries,Deleted Scenes,Behind the Scenes |
+| FIREHOUSE VIETNAM           | Commentaries,Deleted Scenes                            |
+| FISH OPUS                   | Trailers,Deleted Scenes,Behind the Scenes              |
+| FLATLINERS KILLER           | Trailers,Commentaries,Deleted Scenes                   |
+| FLINTSTONES HAPPINESS       | Trailers,Commentaries,Deleted Scenes,Behind the Scenes |
+| FOREVER CANDIDATE           | Commentaries,Deleted Scenes,Behind the Scenes          |
+| FRANKENSTEIN STRANGER       | Deleted Scenes,Behind the Scenes                       |
+| FRIDA SLIPPER               | Trailers,Deleted Scenes                                |
+| FRISCO FORREST              | Commentaries,Deleted Scenes,Behind the Scenes          |
+| FROGMEN BREAKING            | Trailers,Deleted Scenes,Behind the Scenes              |
+| FRONTIER CABIN              | Commentaries,Deleted Scenes                            |
+| FROST HEAD                  | Trailers,Deleted Scenes                                |
+| FUGITIVE MAGUIRE            | Trailers,Commentaries,Deleted Scenes                   |
+| FULL FLATLINERS             | Trailers,Deleted Scenes                                |
+| FURY MURDER                 | Deleted Scenes                                         |
+| GALAXY SWEETHEARTS          | Deleted Scenes                                         |
+| GASLIGHT CRUSADE            | Trailers,Deleted Scenes                                |
+| GENTLEMEN STAGE             | Commentaries,Deleted Scenes                            |
+| GHOST GROUNDHOG             | Trailers,Commentaries,Deleted Scenes,Behind the Scenes |
+| GHOSTBUSTERS ELF            | Trailers,Deleted Scenes,Behind the Scenes              |
+| GLADIATOR WESTWARD          | Commentaries,Deleted Scenes                            |
+| GOLD RIVER                  | Trailers,Commentaries,Deleted Scenes,Behind the Scenes |
+| GONE TROUBLE                | Deleted Scenes,Behind the Scenes                       |
+| GOODFELLAS SALUTE           | Deleted Scenes                                         |
+| GORGEOUS BINGO              | Deleted Scenes,Behind the Scenes                       |
+| GRAFFITI LOVE               | Trailers,Deleted Scenes                                |
+| GRAIL FRANKENSTEIN          | Commentaries,Deleted Scenes,Behind the Scenes          |
+| GREASE YOUTH                | Trailers,Deleted Scenes                                |
+| GREEDY ROOTS                | Trailers,Commentaries,Deleted Scenes                   |
+| GREEK EVERYONE              | Trailers,Deleted Scenes                                |
+| GRIT CLOCKWORK              | Trailers,Deleted Scenes                                |
+| GROUNDHOG UNCUT             | Trailers,Commentaries,Deleted Scenes,Behind the Scenes |
+| GUMP DATE                   | Deleted Scenes                                         |
+| GUNFIGHT MOON               | Deleted Scenes,Behind the Scenes                       |
+| HALF OUTFIELD               | Trailers,Commentaries,Deleted Scenes,Behind the Scenes |
+| HALLOWEEN NUTS              | Deleted Scenes                                         |
+| HAMLET WISDOM               | Trailers,Deleted Scenes                                |
+| HANDICAP BOONDOCK           | Commentaries,Deleted Scenes,Behind the Scenes          |
+| HANGING DEEP                | Trailers,Commentaries,Deleted Scenes                   |
+| HANKY OCTOBER               | Trailers,Commentaries,Deleted Scenes                   |
+| HANOVER GALAXY              | Commentaries,Deleted Scenes,Behind the Scenes          |
+| HAPPINESS UNITED            | Deleted Scenes                                         |
+| HAROLD FRENCH               | Commentaries,Deleted Scenes,Behind the Scenes          |
+| HARRY IDAHO                 | Commentaries,Deleted Scenes                            |
+| HAUNTED ANTITRUST           | Trailers,Deleted Scenes                                |
+| HEARTBREAKERS BRIGHT        | Trailers,Deleted Scenes                                |
+| HEAVYWEIGHTS BEAST          | Deleted Scenes                                         |
+| HELLFIGHTERS SIERRA         | Deleted Scenes,Behind the Scenes                       |
+| HIGHBALL POTTER             | Deleted Scenes                                         |
+| HILLS NEIGHBORS             | Trailers,Commentaries,Deleted Scenes,Behind the Scenes |
+| HOCUS FRIDA                 | Trailers,Deleted Scenes,Behind the Scenes              |
+| HOLOCAUST HIGHBALL          | Deleted Scenes                                         |
+| HONEY TIES                  | Trailers,Commentaries,Deleted Scenes                   |
+| HOOSIERS BIRDCAGE           | Trailers,Commentaries,Deleted Scenes                   |
+| HOPE TOOTSIE                | Trailers,Deleted Scenes,Behind the Scenes              |
+| HORROR REIGN                | Deleted Scenes,Behind the Scenes                       |
+| HOURS RAGE                  | Trailers,Deleted Scenes                                |
+| HOUSE DYNAMITE              | Commentaries,Deleted Scenes,Behind the Scenes          |
+| HUNCHBACK IMPOSSIBLE        | Trailers,Deleted Scenes                                |
+| HUNGER ROOF                 | Deleted Scenes,Behind the Scenes                       |
+| HUNTER ALTER                | Commentaries,Deleted Scenes,Behind the Scenes          |
+| HUNTING MUSKETEERS          | Trailers,Deleted Scenes                                |
+| HYDE DOCTOR                 | Trailers,Deleted Scenes                                |
+| HYSTERICAL GRAIL            | Trailers,Commentaries,Deleted Scenes                   |
+| ICE CROSSING                | Deleted Scenes                                         |
+| IDAHO LOVE                  | Trailers,Commentaries,Deleted Scenes,Behind the Scenes |
+| IDENTITY LOVER              | Deleted Scenes                                         |
+| IMAGE PRINCESS              | Trailers,Commentaries,Deleted Scenes                   |
+| IMPACT ALADDIN              | Trailers,Deleted Scenes                                |
+| IMPOSSIBLE PREJUDICE        | Deleted Scenes                                         |
+| INCH JET                    | Deleted Scenes                                         |
+| INDIAN LOVE                 | Trailers,Commentaries,Deleted Scenes,Behind the Scenes |
+| INNOCENT USUAL              | Trailers,Deleted Scenes,Behind the Scenes              |
+| INSTINCT AIRPORT            | Commentaries,Deleted Scenes                            |
+| INTRIGUE WORST              | Deleted Scenes                                         |
+| INVASION CYCLONE            | Trailers,Deleted Scenes                                |
+| ISHTAR ROCKETEER            | Trailers,Commentaries,Deleted Scenes                   |
+| ITALIAN AFRICAN             | Trailers,Commentaries,Deleted Scenes                   |
+| JACKET FRISCO               | Trailers,Deleted Scenes,Behind the Scenes              |
+| JAPANESE RUN                | Deleted Scenes                                         |
+| JASON TRAP                  | Trailers,Deleted Scenes,Behind the Scenes              |
+| JAWS HARRY                  | Deleted Scenes                                         |
+| JEDI BENEATH                | Trailers,Commentaries,Deleted Scenes                   |
+| JEEPERS WEDDING             | Trailers,Commentaries,Deleted Scenes                   |
+| JEKYLL FROGMEN              | Commentaries,Deleted Scenes,Behind the Scenes          |
+| JERK PAYCHECK               | Trailers,Commentaries,Deleted Scenes,Behind the Scenes |
+| JERSEY SASSY                | Deleted Scenes,Behind the Scenes                       |
+| JUNGLE CLOSER               | Trailers,Commentaries,Deleted Scenes                   |
+| KENTUCKIAN GIANT            | Trailers,Commentaries,Deleted Scenes,Behind the Scenes |
+| KICK SAVANNAH               | Trailers,Commentaries,Deleted Scenes                   |
+| KILLER INNOCENT             | Trailers,Commentaries,Deleted Scenes                   |
+| KING EVOLUTION              | Trailers,Deleted Scenes,Behind the Scenes              |
+| LADY STAGE                  | Trailers,Deleted Scenes,Behind the Scenes              |
+| LADYBUGS ARMAGEDDON         | Deleted Scenes                                         |
+| LANGUAGE COWBOY             | Trailers,Deleted Scenes                                |
+| LAWLESS VISION              | Deleted Scenes,Behind the Scenes                       |
+| LAWRENCE LOVE               | Commentaries,Deleted Scenes,Behind the Scenes          |
+| LEBOWSKI SOLDIERS           | Commentaries,Deleted Scenes                            |
+| LEGEND JEDI                 | Commentaries,Deleted Scenes                            |
+| LESSON CLEOPATRA            | Deleted Scenes,Behind the Scenes                       |
+| LIBERTY MAGNIFICENT         | Commentaries,Deleted Scenes,Behind the Scenes          |
+| LICENSE WEEKEND             | Deleted Scenes,Behind the Scenes                       |
+| LIES TREATMENT              | Commentaries,Deleted Scenes,Behind the Scenes          |
+| LIFE TWISTED                | Commentaries,Deleted Scenes                            |
+| LION UNCUT                  | Trailers,Deleted Scenes                                |
+| LOATHING LEGALLY            | Deleted Scenes                                         |
+| LOLITA WORLD                | Trailers,Deleted Scenes                                |
+| LONELY ELEPHANT             | Trailers,Commentaries,Deleted Scenes,Behind the Scenes |
+| LOSER HUSTLER               | Deleted Scenes,Behind the Scenes                       |
+| LOST BIRD                   | Deleted Scenes                                         |
+| MADIGAN DORADO              | Deleted Scenes,Behind the Scenes                       |
+| MADISON TRAP                | Commentaries,Deleted Scenes,Behind the Scenes          |
+| MADRE GABLES                | Trailers,Commentaries,Deleted Scenes                   |
+| MAGNIFICENT CHITTY          | Commentaries,Deleted Scenes                            |
+| MAGNOLIA FORRESTER          | Trailers,Commentaries,Deleted Scenes                   |
+| MAKER GABLES                | Deleted Scenes,Behind the Scenes                       |
+| MALLRATS UNITED             | Trailers,Commentaries,Deleted Scenes                   |
+| MANNEQUIN WORST             | Trailers,Commentaries,Deleted Scenes                   |
+| MARS ROMAN                  | Commentaries,Deleted Scenes                            |
+| MASK PEACH                  | Commentaries,Deleted Scenes                            |
+| MATRIX SNOWMAN              | Commentaries,Deleted Scenes,Behind the Scenes          |
+| MENAGERIE RUSHMORE          | Trailers,Commentaries,Deleted Scenes                   |
+| METAL ARMAGEDDON            | Trailers,Commentaries,Deleted Scenes                   |
+| MIDNIGHT WESTWARD           | Trailers,Deleted Scenes                                |
+| MIDSUMMER GROUNDHOG         | Trailers,Deleted Scenes                                |
+| MILE MULAN                  | Deleted Scenes,Behind the Scenes                       |
+| MILLION ACE                 | Deleted Scenes                                         |
+| MINDS TRUMAN                | Deleted Scenes,Behind the Scenes                       |
+| MINE TITANS                 | Trailers,Deleted Scenes                                |
+| MIRACLE VIRTUAL             | Trailers,Deleted Scenes                                |
+| MODERN DORADO               | Trailers,Commentaries,Deleted Scenes                   |
+| MOON BUNCH                  | Deleted Scenes,Behind the Scenes                       |
+| MOONWALKER FOOL             | Trailers,Deleted Scenes                                |
+| MOURNING PURPLE             | Trailers,Commentaries,Deleted Scenes,Behind the Scenes |
+| MOVIE SHAKESPEARE           | Commentaries,Deleted Scenes,Behind the Scenes          |
+| MULHOLLAND BEAST            | Trailers,Deleted Scenes,Behind the Scenes              |
+| MUPPET MILE                 | Trailers,Deleted Scenes                                |
+| MURDER ANTITRUST            | Trailers,Deleted Scenes,Behind the Scenes              |
+| MUSCLE BRIGHT               | Deleted Scenes                                         |
+| MUSKETEERS WAIT             | Deleted Scenes,Behind the Scenes                       |
+| MUSSOLINI SPOILERS          | Deleted Scenes,Behind the Scenes                       |
+| NATURAL STOCK               | Commentaries,Deleted Scenes                            |
+| NEIGHBORS CHARADE           | Trailers,Commentaries,Deleted Scenes                   |
+| NETWORK PEAK                | Commentaries,Deleted Scenes,Behind the Scenes          |
+| NEWSIES STORY               | Trailers,Deleted Scenes                                |
+| NEWTON LABYRINTH            | Trailers,Commentaries,Deleted Scenes,Behind the Scenes |
+| NIGHTMARE CHILL             | Trailers,Deleted Scenes,Behind the Scenes              |
+| NORTH TEQUILA               | Commentaries,Deleted Scenes,Behind the Scenes          |
+| NOTORIOUS REUNION           | Trailers,Commentaries,Deleted Scenes                   |
+| NOVOCAINE FLIGHT            | Trailers,Commentaries,Deleted Scenes                   |
+| OLEANDER CLUE               | Commentaries,Deleted Scenes                            |
+| OPERATION OPERATION         | Trailers,Commentaries,Deleted Scenes,Behind the Scenes |
+| OPPOSITE NECKLACE           | Deleted Scenes                                         |
+| OPUS ICE                    | Commentaries,Deleted Scenes                            |
+| ORDER BETRAYED              | Deleted Scenes,Behind the Scenes                       |
+| ORIENT CLOSER               | Commentaries,Deleted Scenes                            |
+| OTHERS SOUP                 | Deleted Scenes                                         |
+| OUTBREAK DIVINE             | Trailers,Deleted Scenes,Behind the Scenes              |
+| OUTFIELD MASSACRE           | Trailers,Deleted Scenes                                |
+| OZ LIAISONS                 | Commentaries,Deleted Scenes,Behind the Scenes          |
+| PACIFIC AMISTAD             | Trailers,Commentaries,Deleted Scenes,Behind the Scenes |
+| PAJAMA JAWBREAKER           | Trailers,Deleted Scenes                                |
+| PANIC CLUB                  | Commentaries,Deleted Scenes                            |
+| PANKY SUBMARINE             | Trailers,Commentaries,Deleted Scenes,Behind the Scenes |
+| PANTHER REDS                | Deleted Scenes,Behind the Scenes                       |
+| PAPI NECKLACE               | Trailers,Deleted Scenes,Behind the Scenes              |
+| PARADISE SABRINA            | Commentaries,Deleted Scenes,Behind the Scenes          |
+| PARIS WEEKEND               | Trailers,Commentaries,Deleted Scenes,Behind the Scenes |
+| PARK CITIZEN                | Trailers,Deleted Scenes                                |
+| PAST SUICIDES               | Trailers,Deleted Scenes,Behind the Scenes              |
+| PATRIOT ROMAN               | Trailers,Deleted Scenes                                |
+| PAYCHECK WAIT               | Commentaries,Deleted Scenes                            |
+| PEAK FOREVER                | Trailers,Commentaries,Deleted Scenes,Behind the Scenes |
+| PELICAN COMFORTS            | Commentaries,Deleted Scenes                            |
+| PERFECT GROOVE              | Commentaries,Deleted Scenes,Behind the Scenes          |
+| PERSONAL LADYBUGS           | Deleted Scenes,Behind the Scenes                       |
+| PHILADELPHIA WIFE           | Trailers,Commentaries,Deleted Scenes                   |
+| PIANIST OUTFIELD            | Trailers,Commentaries,Deleted Scenes                   |
+| PICKUP DRIVING              | Trailers,Commentaries,Deleted Scenes,Behind the Scenes |
+| PILOT HOOSIERS              | Trailers,Deleted Scenes                                |
+| PIRATES ROXANNE             | Commentaries,Deleted Scenes                            |
+| PITTSBURGH HUNCHBACK        | Trailers,Deleted Scenes,Behind the Scenes              |
+| POCUS PULP                  | Commentaries,Deleted Scenes,Behind the Scenes          |
+| POLISH BROOKLYN             | Trailers,Commentaries,Deleted Scenes,Behind the Scenes |
+| PREJUDICE OLEANDER          | Trailers,Commentaries,Deleted Scenes                   |
+| PRIDE ALAMO                 | Deleted Scenes                                         |
+| PRIMARY GLASS               | Trailers,Deleted Scenes,Behind the Scenes              |
+| PRINCESS GIANT              | Trailers,Deleted Scenes                                |
+| PRIX UNDEFEATED             | Trailers,Deleted Scenes                                |
+| PUNK DIVORCE                | Trailers,Commentaries,Deleted Scenes                   |
+| PURE RUNNER                 | Trailers,Deleted Scenes                                |
+| PURPLE MOVIE                | Commentaries,Deleted Scenes                            |
+| QUEEN LUKE                  | Commentaries,Deleted Scenes,Behind the Scenes          |
+| RACER EGG                   | Trailers,Commentaries,Deleted Scenes                   |
+| RAGING AIRPLANE             | Commentaries,Deleted Scenes                            |
+| RAIDERS ANTITRUST           | Deleted Scenes                                         |
+| RAINBOW SHOCK               | Trailers,Commentaries,Deleted Scenes,Behind the Scenes |
+| RANGE MOONWALKER            | Trailers,Commentaries,Deleted Scenes                   |
+| REAR TRADING                | Trailers,Commentaries,Deleted Scenes                   |
+| REDEMPTION COMFORTS         | Trailers,Deleted Scenes,Behind the Scenes              |
+| REIGN GENTLEMEN             | Deleted Scenes,Behind the Scenes                       |
+| RESURRECTION SILVERADO      | Trailers,Deleted Scenes                                |
+| RIDGEMONT SUBMARINE         | Commentaries,Deleted Scenes,Behind the Scenes          |
+| RIGHT CRANES                | Trailers,Commentaries,Deleted Scenes                   |
+| ROCK INSTINCT               | Trailers,Commentaries,Deleted Scenes,Behind the Scenes |
+| ROCKETEER MOTHER            | Deleted Scenes,Behind the Scenes                       |
+| ROLLERCOASTER BRINGING      | Trailers,Commentaries,Deleted Scenes                   |
+| ROOF CHAMPION               | Deleted Scenes,Behind the Scenes                       |
+| ROOM ROMAN                  | Trailers,Deleted Scenes,Behind the Scenes              |
+| ROOTS REMEMBER              | Commentaries,Deleted Scenes,Behind the Scenes          |
+| ROSES TREASURE              | Commentaries,Deleted Scenes,Behind the Scenes          |
+| ROUGE SQUAD                 | Commentaries,Deleted Scenes,Behind the Scenes          |
+| ROXANNE REBEL               | Deleted Scenes,Behind the Scenes                       |
+| RUGRATS SHAKESPEARE         | Trailers,Commentaries,Deleted Scenes,Behind the Scenes |
+| RULES HUMAN                 | Deleted Scenes,Behind the Scenes                       |
+| RUN PACIFIC                 | Commentaries,Deleted Scenes,Behind the Scenes          |
+| RUNNER MADIGAN              | Commentaries,Deleted Scenes,Behind the Scenes          |
+| RUSH GOODFELLAS             | Deleted Scenes                                         |
+| RUSHMORE MERMAID            | Trailers,Commentaries,Deleted Scenes                   |
+| SADDLE ANTITRUST            | Trailers,Deleted Scenes                                |
+| SAINTS BRIDE                | Deleted Scenes                                         |
+| SALUTE APOLLO               | Trailers,Commentaries,Deleted Scenes,Behind the Scenes |
+| SASSY PACKER                | Deleted Scenes,Behind the Scenes                       |
+| SATISFACTION CONFIDENTIAL   | Commentaries,Deleted Scenes,Behind the Scenes          |
+| SATURDAY LAMBS              | Commentaries,Deleted Scenes                            |
+| SATURN NAME                 | Trailers,Commentaries,Deleted Scenes,Behind the Scenes |
+| SAVANNAH TOWN               | Commentaries,Deleted Scenes,Behind the Scenes          |
+| SCARFACE BANG               | Commentaries,Deleted Scenes                            |
+| SCISSORHANDS SLUMS          | Commentaries,Deleted Scenes,Behind the Scenes          |
+| SCORPION APOLLO             | Commentaries,Deleted Scenes                            |
+| SEA VIRGIN                  | Deleted Scenes                                         |
+| SEABISCUIT PUNK             | Commentaries,Deleted Scenes,Behind the Scenes          |
+| SEARCHERS WAIT              | Trailers,Commentaries,Deleted Scenes,Behind the Scenes |
+| SECRET GROUNDHOG            | Commentaries,Deleted Scenes                            |
+| SENSE GREEK                 | Deleted Scenes,Behind the Scenes                       |
+| SEVEN SWARM                 | Deleted Scenes                                         |
+| SHANE DARKNESS              | Commentaries,Deleted Scenes                            |
+| SHANGHAI TYCOON             | Commentaries,Deleted Scenes,Behind the Scenes          |
+| SHAWSHANK BUBBLE            | Commentaries,Deleted Scenes                            |
+| SHEPHERD MIDSUMMER          | Deleted Scenes                                         |
+| SHINING ROSES               | Trailers,Commentaries,Deleted Scenes,Behind the Scenes |
+| SHOW LORD                   | Deleted Scenes                                         |
+| SHRUNK DIVINE               | Trailers,Deleted Scenes,Behind the Scenes              |
+| SIDE ARK                    | Deleted Scenes,Behind the Scenes                       |
+| SIEGE MADRE                 | Trailers,Deleted Scenes                                |
+| SIERRA DIVIDE               | Commentaries,Deleted Scenes                            |
+| SILENCE KANE                | Trailers,Deleted Scenes,Behind the Scenes              |
+| SINNERS ATLANTIS            | Trailers,Commentaries,Deleted Scenes                   |
+| SKY MIRACLE                 | Trailers,Commentaries,Deleted Scenes                   |
+| SLEEPLESS MONSOON           | Trailers,Deleted Scenes,Behind the Scenes              |
+| SLEEPY JAPANESE             | Trailers,Commentaries,Deleted Scenes                   |
+| SLEUTH ORIENT               | Deleted Scenes,Behind the Scenes                       |
+| SLIPPER FIDELITY            | Trailers,Deleted Scenes                                |
+| SLUMS DUCK                  | Commentaries,Deleted Scenes,Behind the Scenes          |
+| SOLDIERS EVOLUTION          | Trailers,Commentaries,Deleted Scenes,Behind the Scenes |
+| SONG HEDWIG                 | Trailers,Deleted Scenes                                |
+| SORORITY QUEEN              | Trailers,Deleted Scenes                                |
+| SPARTACUS CHEAPER           | Deleted Scenes,Behind the Scenes                       |
+| SPEAKEASY DATE              | Deleted Scenes,Behind the Scenes                       |
+| SPICE SORORITY              | Trailers,Commentaries,Deleted Scenes,Behind the Scenes |
+| SPIKING ELEMENT             | Trailers,Deleted Scenes,Behind the Scenes              |
+| SPINAL ROCKY                | Commentaries,Deleted Scenes                            |
+| SPIRIT FLINTSTONES          | Commentaries,Deleted Scenes                            |
+| SPLASH GUMP                 | Trailers,Commentaries,Deleted Scenes,Behind the Scenes |
+| SPLENDOR PATTON             | Trailers,Commentaries,Deleted Scenes,Behind the Scenes |
+| SPOILERS HELLFIGHTERS       | Trailers,Commentaries,Deleted Scenes,Behind the Scenes |
+| SPY MILE                    | Trailers,Commentaries,Deleted Scenes,Behind the Scenes |
+| SQUAD FISH                  | Commentaries,Deleted Scenes,Behind the Scenes          |
+| STAGECOACH ARMAGEDDON       | Trailers,Deleted Scenes                                |
+| STALLION SUNDANCE           | Deleted Scenes,Behind the Scenes                       |
+| STAMPEDE DISTURBING         | Commentaries,Deleted Scenes,Behind the Scenes          |
+| STATE WASTELAND             | Trailers,Commentaries,Deleted Scenes,Behind the Scenes |
+| STEEL SANTA                 | Commentaries,Deleted Scenes                            |
+| STEERS ARMAGEDDON           | Trailers,Commentaries,Deleted Scenes,Behind the Scenes |
+| STEPMOM DREAM               | Deleted Scenes,Behind the Scenes                       |
+| STING PERSONAL              | Commentaries,Deleted Scenes,Behind the Scenes          |
+| STRANGELOVE DESIRE          | Trailers,Commentaries,Deleted Scenes                   |
+| STRANGER STRANGERS          | Commentaries,Deleted Scenes                            |
+| STRICTLY SCARFACE           | Commentaries,Deleted Scenes,Behind the Scenes          |
+| SUICIDES SILENCE            | Deleted Scenes                                         |
+| SUMMER SCARFACE             | Deleted Scenes,Behind the Scenes                       |
+| SWEDEN SHINING              | Deleted Scenes,Behind the Scenes                       |
+| SWEET BROTHERHOOD           | Deleted Scenes                                         |
+| SWEETHEARTS SUSPECTS        | Trailers,Commentaries,Deleted Scenes,Behind the Scenes |
+| TALENTED HOMICIDE           | Commentaries,Deleted Scenes,Behind the Scenes          |
+| TAXI KICK                   | Commentaries,Deleted Scenes                            |
+| TEEN APOLLO                 | Trailers,Deleted Scenes,Behind the Scenes              |
+| TELEMARK HEARTBREAKERS      | Trailers,Commentaries,Deleted Scenes,Behind the Scenes |
+| TEMPLE ATTRACTION           | Commentaries,Deleted Scenes                            |
+| TERMINATOR CLUB             | Trailers,Deleted Scenes,Behind the Scenes              |
+| THEORY MERMAID              | Deleted Scenes,Behind the Scenes                       |
+| THIEF PELICAN               | Deleted Scenes,Behind the Scenes                       |
+| TIES HUNGER                 | Deleted Scenes                                         |
+| TITANIC BOONDOCK            | Trailers,Commentaries,Deleted Scenes,Behind the Scenes |
+| TOOTSIE PILOT               | Commentaries,Deleted Scenes,Behind the Scenes          |
+| TOURIST PELICAN             | Deleted Scenes                                         |
+| TRADING PINOCCHIO           | Trailers,Deleted Scenes,Behind the Scenes              |
+| TRAIN BUNCH                 | Trailers,Deleted Scenes                                |
+| TRAMP OTHERS                | Deleted Scenes                                         |
+| TREASURE COMMAND            | Trailers,Commentaries,Deleted Scenes,Behind the Scenes |
+| TREATMENT JEKYLL            | Trailers,Deleted Scenes,Behind the Scenes              |
+| TRIP NEWTON                 | Commentaries,Deleted Scenes                            |
+| TROJAN TOMORROW             | Commentaries,Deleted Scenes                            |
+| TROOPERS METAL              | Deleted Scenes,Behind the Scenes                       |
+| TUXEDO MILE                 | Commentaries,Deleted Scenes,Behind the Scenes          |
+| TWISTED PIRATES             | Trailers,Commentaries,Deleted Scenes                   |
+| TYCOON GATHERING            | Trailers,Commentaries,Deleted Scenes                   |
+| UNBREAKABLE KARATE          | Deleted Scenes,Behind the Scenes                       |
+| UNFAITHFUL KILL             | Commentaries,Deleted Scenes                            |
+| UNITED PILOT                | Trailers,Deleted Scenes                                |
+| UNTOUCHABLES SUNRISE        | Trailers,Deleted Scenes                                |
+| VALLEY PACKER               | Commentaries,Deleted Scenes                            |
+| VANILLA DAY                 | Deleted Scenes,Behind the Scenes                       |
+| VANISHED GARDEN             | Trailers,Commentaries,Deleted Scenes                   |
+| VARSITY TRIP                | Commentaries,Deleted Scenes                            |
+| VIDEOTAPE ARSENIC           | Commentaries,Deleted Scenes,Behind the Scenes          |
+| VIETNAM SMOOCHY             | Deleted Scenes,Behind the Scenes                       |
+| VIRGINIAN PLUTO             | Deleted Scenes                                         |
+| VIRTUAL SPOILERS            | Commentaries,Deleted Scenes                            |
+| VISION TORQUE               | Commentaries,Deleted Scenes                            |
+| VOLCANO TEXAS               | Trailers,Commentaries,Deleted Scenes,Behind the Scenes |
+| WAGON JAWS                  | Deleted Scenes,Behind the Scenes                       |
+| WAKE JAWS                   | Trailers,Commentaries,Deleted Scenes,Behind the Scenes |
+| WANDA CHAMBER               | Commentaries,Deleted Scenes,Behind the Scenes          |
+| WAR NOTTING                 | Deleted Scenes,Behind the Scenes                       |
+| WASTELAND DIVINE            | Trailers,Deleted Scenes,Behind the Scenes              |
+| WATCH TRACY                 | Trailers,Deleted Scenes,Behind the Scenes              |
+| WEEKEND PERSONAL            | Trailers,Commentaries,Deleted Scenes,Behind the Scenes |
+| WESTWARD SEABISCUIT         | Commentaries,Deleted Scenes                            |
+| WHALE BIKINI                | Commentaries,Deleted Scenes,Behind the Scenes          |
+| WHISPERER GIANT             | Trailers,Deleted Scenes                                |
+| WIFE TURN                   | Deleted Scenes,Behind the Scenes                       |
+| WILD APOLLO                 | Trailers,Commentaries,Deleted Scenes,Behind the Scenes |
+| WIND PHANTOM                | Commentaries,Deleted Scenes                            |
+| WINDOW SIDE                 | Deleted Scenes,Behind the Scenes                       |
+| WISDOM WORKER               | Deleted Scenes,Behind the Scenes                       |
+| WIZARD COLDBLOODED          | Commentaries,Deleted Scenes,Behind the Scenes          |
+| WOMEN DORADO                | Deleted Scenes,Behind the Scenes                       |
+| WORDS HUNTER                | Trailers,Commentaries,Deleted Scenes                   |
+| WORKING MICROCOSMOS         | Commentaries,Deleted Scenes                            |
+| WORST BANGER                | Deleted Scenes,Behind the Scenes                       |
+| WYOMING STORM               | Deleted Scenes                                         |
+| YENTL IDAHO                 | Trailers,Commentaries,Deleted Scenes                   |
+| ZHIVAGO CORE                | Deleted Scenes                                         |
+| ZOOLANDER FICTION           | Trailers,Deleted Scenes                                |
++-----------------------------+--------------------------------------------------------+
+503 rows in set (0.00 sec)
+
+9). mysql> SELECT film.film_id, title, category.name FROM film INNER JOIN film_category ON film.film_id = film_category.film_id INNER JOIN category ON film_category.category_id = category.category_id WHERE category.name = "Horror";
++---------+-----------------------------+--------+
+| film_id | title                       | name   |
++---------+-----------------------------+--------+
+|       2 | ACE GOLDFINGER              | Horror |
+|       4 | AFFAIR PREJUDICE            | Horror |
+|       8 | AIRPORT POLLOCK             | Horror |
+|       9 | ALABAMA DEVIL               | Horror |
+|      13 | ALI FOREVER                 | Horror |
+|      24 | ANALYZE HOOSIERS            | Horror |
+|      30 | ANYTHING SAVANNAH           | Horror |
+|      34 | ARABIA DOGMA                | Horror |
+|      35 | ARACHNOPHOBIA ROLLERCOASTER | Horror |
+|      65 | BEHAVIOR RUNAWAY            | Horror |
+|      92 | BOWFINGER GABLES            | Horror |
+|     122 | CARRIE BUNCH                | Horror |
+|     171 | COMMANDMENTS EXPRESS        | Horror |
+|     222 | DESERT POSEIDON             | Horror |
+|     258 | DRUMS DYNAMITE              | Horror |
+|     275 | EGYPT TENENBAUMS            | Horror |
+|     277 | ELEPHANT TROJAN             | Horror |
+|     301 | FAMILY SWEET                | Horror |
+|     313 | FIDELITY DEVIL              | Horror |
+|     334 | FREDDY STORM                | Horror |
+|     351 | GASLIGHT CRUSADE            | Horror |
+|     415 | HIGH ENCINO                 | Horror |
+|     475 | JAPANESE RUN                | Horror |
+|     494 | KARATE MOON                 | Horror |
+|     495 | KENTUCKIAN GIANT            | Horror |
+|     506 | LADY STAGE                  | Horror |
+|     527 | LOLA AGENT                  | Horror |
+|     535 | LOVE SUICIDES               | Horror |
+|     593 | MONTEREY LABYRINTH          | Horror |
+|     600 | MOTIONS DETAILS             | Horror |
+|     653 | PANIC CLUB                  | Horror |
+|     658 | PARIS WEEKEND               | Horror |
+|     665 | PATTON INTERVIEW            | Horror |
+|     702 | PULP BEVERLY                | Horror |
+|     716 | REAP UNFAITHFUL             | Horror |
+|     722 | REEF SALUTE                 | Horror |
+|     737 | ROCK INSTINCT               | Horror |
+|     740 | ROLLERCOASTER BRINGING      | Horror |
+|     749 | RULES HUMAN                 | Horror |
+|     799 | SIMON NORTH                 | Horror |
+|     800 | SINNERS ATLANTIS            | Horror |
+|     804 | SLEEPING SUSPECTS           | Horror |
+|     830 | SPIRIT FLINTSTONES          | Horror |
+|     854 | STRANGERS GRAFFITI          | Horror |
+|     856 | STREETCAR INTENTIONS        | Horror |
+|     870 | SWARM GOLD                  | Horror |
+|     876 | TARZAN VIDEOTAPE            | Horror |
+|     881 | TEMPLE ATTRACTION           | Horror |
+|     885 | TEXAS WATCH                 | Horror |
+|     904 | TRAIN BUNCH                 | Horror |
+|     909 | TREASURE COMMAND            | Horror |
+|     922 | UNDEFEATED DALMATIONS       | Horror |
+|     965 | WATERSHIP FRONTIER          | Horror |
+|     990 | WORLD LEATHERNECKS          | Horror |
+|     995 | YENTL IDAHO                 | Horror |
+|     998 | ZHIVAGO CORE                | Horror |
++---------+-----------------------------+--------+
+56 rows in set (0.00 sec)

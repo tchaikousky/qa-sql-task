@@ -1,0 +1,34 @@
+mysql> create table Orders (Order_Id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, Customer_Id INT, Product_Id INT, Date_Placed date NOT NULL, Quantity INT NOT NULL,  FOREIGN KEY (Customer_Id) REFERENCES Customer(Id), FOREIGN KEY (Product_Id) REFERENCES Product(Id));
+Query OK, 0 rows affected (0.12 sec)
+
+mysql> describe customer;
++----------+--------------+------+-----+---------+----------------+
+| Field    | Type         | Null | Key | Default | Extra          |
++----------+--------------+------+-----+---------+----------------+
+| Id       | int          | NO   | PRI | NULL    | auto_increment |
+| Name     | varchar(255) | NO   |     | NULL    |                |
+| Birthday | date         | YES  |     | NULL    |                |
++----------+--------------+------+-----+---------+----------------+
+3 rows in set (0.00 sec)
+
+mysql> describe product;
++----------+--------------+------+-----+---------+----------------+
+| Field    | Type         | Null | Key | Default | Extra          |
++----------+--------------+------+-----+---------+----------------+
+| Id       | int          | NO   | PRI | NULL    | auto_increment |
+| Name     | varchar(255) | NO   |     | NULL    |                |
+| Quantity | int          | NO   |     | NULL    |                |
++----------+--------------+------+-----+---------+----------------+
+3 rows in set (0.00 sec)
+
+mysql> describe orders;
++-------------+------+------+-----+---------+----------------+
+| Field       | Type | Null | Key | Default | Extra          |
++-------------+------+------+-----+---------+----------------+
+| Order_Id    | int  | NO   | PRI | NULL    | auto_increment |
+| Customer_Id | int  | YES  | MUL | NULL    |                |
+| Product_Id  | int  | YES  | MUL | NULL    |                |
+| Date_Placed | date | NO   |     | NULL    |                |
+| Quantity    | int  | NO   |     | NULL    |                |
++-------------+------+------+-----+---------+----------------+
+5 rows in set (0.00 sec)

@@ -1,0 +1,21 @@
+mysql> create database testdb;
+Query OK, 1 row affected (0.08 sec)
+
+mysql> use testdb;
+Database changed
+mysql> create table Customer (id int NOT NULL AUTO_INCREMENT PRIMARY KEY, name VARCHAR NOT NULL, registration_date date);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'NOT NULL, registration_date date)' at line 1
+mysql> create table Customer (Id int NOT NULL AUTO_INCREMENT PRIMARY KEY, Name VARCHAR NOT NULL, Birthday date);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'NOT NULL, Birthday date)' at line 1
+mysql> create table Customer (Id int NOT NULL AUTO_INCREMENT PRIMARY KEY, Name VARCHAR(255) NOT NULL, Birthday date);
+Query OK, 0 rows affected (0.10 sec)
+
+mysql> describe customer;
++----------+--------------+------+-----+---------+----------------+
+| Field    | Type         | Null | Key | Default | Extra          |
++----------+--------------+------+-----+---------+----------------+
+| Id       | int          | NO   | PRI | NULL    | auto_increment |
+| Name     | varchar(255) | NO   |     | NULL    |                |
+| Birthday | date         | YES  |     | NULL    |                |
++----------+--------------+------+-----+---------+----------------+
+3 rows in set (0.02 sec)
